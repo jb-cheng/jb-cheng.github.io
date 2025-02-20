@@ -13,6 +13,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+
+    cursor: url(./assets/arrowhead-rounded-outline.png), auto;
 }
 
 .white-bg {
