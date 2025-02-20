@@ -1,10 +1,10 @@
 import React from "react";
 import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // ✅ Use loadSlim instead of loadFull
+import { loadSlim } from "tsparticles-slim";
 
 const ParticleBackground = () => {
   const particlesInit = async (main) => {
-    await loadSlim(main); // ✅ Fix: Use loadSlim
+    await loadSlim(main);
   };
 
   return (
