@@ -1,6 +1,6 @@
-import '../styles.css';
+import './styles.css';
 
-import Landing from './components/Landing';
+import Landing from './components/Landing/Landing';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -11,9 +11,11 @@ function App() {
     <div>
       <Landing />
       <About />
+      {/*
       <Experience />
       <Projects />
       <Contact />
+      */}
     </div>
   );
 }
