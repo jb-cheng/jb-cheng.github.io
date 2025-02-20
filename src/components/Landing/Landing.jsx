@@ -4,14 +4,16 @@ import WideThreeColourBar from './WideThreeColourBar';
 import Rings from '../../assets/Rings.svg';
 import DownArrow from './DownArrow';
 import NavItem from './NavItem';
+import ParticleBackground from './ParticleBackground';
 
 export default function Landing() {
     return (
-        <section>
+        <section style={{ position: "relative", overflow: "hidden" }}>
+            <div className='particles-container'><ParticleBackground /></div>
             <div className="box">
-                <img src={Rings} alt="Concentric Rings" style={{ opacity: 0.3, position: "relative", top: "7.5%", left: "5.5%", userSelect: "none"}}/>
-                <div className="SWE-text-wrapper">Software Engineer</div>
-                <h1>JUN BIN CHENG</h1>
+                <img src={Rings} alt="Concentric Rings" style={{ opacity: 0.3, position: "relative", top: "10%", left: "5.5%", userSelect: "none"}}/>
+                <div className="SWE-text-wrapper">3B Software Engineering Student</div>
+                <h1 className='title'>JUN BIN CHENG</h1>
                 <WideThreeColourBar />
             </div>
             <div className="box" style={{left: "52%"}}>

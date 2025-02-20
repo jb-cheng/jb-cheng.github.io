@@ -1,7 +1,7 @@
 import './styles.css';
 
 import Landing from './components/Landing/Landing';
-import About from './components/About';
+import About from './components/About/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';

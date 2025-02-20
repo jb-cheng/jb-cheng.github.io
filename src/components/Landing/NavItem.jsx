@@ -4,5 +4,5 @@ export default function NavItem ({ targetId, children }) {
       target?.scrollIntoView({ behavior: 'smooth' });
     };
   
-    return <h2 onClick={handleClick}>{children}</h2>;
+    return <h2 className="menu-options" onClick={handleClick}>{children}</h2>;
   };
