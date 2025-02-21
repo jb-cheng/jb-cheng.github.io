@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const Sidebar = ({ text }) => {
+const Sidebar = ({ text, scrollAmount}) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            setIsVisible(scrollY > 100); // Adjust threshold as needed
+            setIsVisible(scrollY > scrollAmount); // Adjust threshold as needed
         };
 
         // Run immediately on page load to check initial scroll position

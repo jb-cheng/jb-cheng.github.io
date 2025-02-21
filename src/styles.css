@@ -55,13 +55,13 @@ section {
 .side-text {
     color: #2D2B2B;
     font-family: "Poppins";
-    font-size: 10em;
+    font-size: 10rem;
     user-select: none;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     white-space: nowrap;
     position: absolute;
-    left: -100%;
+    left: -12vw;
     top: 0;
 }
 
