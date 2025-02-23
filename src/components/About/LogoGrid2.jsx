@@ -9,27 +9,50 @@ import PyTorch from "../../assets/logos/PyTorch.svg";
 import SQL from "../../assets/logos/SQL.svg";
 import Tensorflow from "../../assets/logos/Tensorflow.svg";
 import React from "../../assets/logos/React.svg";
-import Docker from "../../assets/logos/Docker.svg";
-import Azure from "../../assets/logos/Azure.svg";
 
-const logos = [
-    { src: Python, alt: "Python" },
-    { src: Java, alt: "Java" },
+const logos1 = [
     { src: CPlusPlus, alt: "C++" },
-    { src: PyTorch, alt: "PyTorch" },
-    { src: NumPy, alt: "NumPy" },
-    { src: Tensorflow, alt: "TensorFlow" },
-    { src: React, alt: "React" },
+    { src: Java, alt: "Java" },
     { src: JS, alt: "JavaScript" },
     { src: NodeJS, alt: "Node.js" },
+    { src: NumPy, alt: "NumPy" },
+    { src: Python, alt: "Python" },
+    { src: PyTorch, alt: "PyTorch" },
     { src: SQL, alt: "SQL" },
-    { src: Docker, alt: "Docker" },
-    { src: Azure, alt: "Azure" }
+    { src: Tensorflow, alt: "TensorFlow" },
+];
+
+const logos2 = [
+    { src: React, alt: "React" },
+    // TODO: add 8 more
+    { src: Java, alt: "Java" },
+    { src: JS, alt: "JavaScript" },
+    { src: NodeJS, alt: "Node.js" },
+    { src: NumPy, alt: "NumPy" },
+    { src: Python, alt: "Python" },
+    { src: PyTorch, alt: "PyTorch" },
+    { src: SQL, alt: "SQL" },
+    { src: Tensorflow, alt: "TensorFlow" },
 ];
 
 
 export default function LogoGrid() {
     const [activeLogo, setActiveLogo] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    // Get logos based on the current page
+    const logos = currentPage === 1 ? logos1 : logos2;
+
+
+    // Set the page every 5 seconds
+    useEffect(() => {
+        const pageSwitchInterval = setInterval(() => {
+            setCurrentPage((prevPage) => (prevPage === 1 ? 2 : 1));
+        }, 5000); // Change page every 5 seconds
+    
+        return () => clearInterval(pageSwitchInterval);
+    }, []);
+
 
     // Change the active logo every 2 seconds
     useEffect(() => {
@@ -44,7 +67,7 @@ export default function LogoGrid() {
         }, 2000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [logos]);
 
     return (
         <div className="logo-container">

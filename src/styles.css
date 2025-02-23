@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@1,700&display=swap');
 
 body {
     margin: 0;
@@ -23,10 +24,10 @@ body {
     cursor: url(./assets/arrowhead-rounded-outline.png), auto;
 }
 
+/* This is required to hide the particles */
 .white-bg {
     width: 100%;
     background-color: #f5eddd;
-    height: 100vh;
     position: relative;
 }
 
@@ -36,7 +37,7 @@ section {
     align-items: center;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .sidebar {
@@ -61,8 +62,10 @@ section {
     text-orientation: mixed;
     white-space: nowrap;
     position: absolute;
-    left: -12vw;
+    left: 0;
     top: 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .section-header {

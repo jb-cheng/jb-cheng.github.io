@@ -1,0 +1,24 @@
+.job-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+    position: relative;
+    left: 5%;
+}
+
+.job {
+    
+    
+    height: 20%;
+    word-wrap: break-word;
+    border: black 1px solid;
+}
+
+h2, h3, h4, p {
+    color: black;
+}
+
+.date {
+    color: black;
+}
