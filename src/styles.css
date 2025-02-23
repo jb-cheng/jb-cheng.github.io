@@ -28,6 +28,9 @@ body {
 .white-bg {
     width: 100%;
     background-color: #f5eddd;
+    opacity: 1;
+    background-image:  linear-gradient(#F1EAD9 4px, transparent 4px), linear-gradient(to right, #F1EAD9 4px, #f5eddd 4px);
+    background-size: 80px 80px;
     position: relative;
 }
 
