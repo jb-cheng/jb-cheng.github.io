@@ -8,6 +8,7 @@ import ProjectCard from './ProjectCard';
 import ANN from '../../assets/projects/ANN.png';
 import OU from '../../assets/projects/OU.png';
 import RideShareRally from '../../assets/projects/ridesharerally.png';
+import VaxPass from '../../assets/projects/vaccine.png';
 
 export default function Projects() {
     return (
@@ -16,7 +17,7 @@ export default function Projects() {
             width: "100%", 
             padding: "20px 0", 
             overflow: "visible",
-            height: "100%",
+            height: "auto",
             minHeight: "100vh"
         }}>
                 <SideBar text="Projects" scrollAmount="1600"/>
@@ -30,6 +31,9 @@ export default function Projects() {
                         linkText="Learn more about TuringSketch!"
                         description="Award Winner at DeltaHacks XI."
                         description2="Turing Test inspired game where players guess which image is AI generated and which is human drawn."
+                        languages={["Python"]}
+                        frameworks={["Streamlit"]}
+                        tools={["pollinations.ai", "Azure SQL"]}
                     /> 
 
                     <ProjectCard
@@ -37,14 +41,19 @@ export default function Projects() {
                         img={ANN}
                         description="A collection of deep learning models for image and speech recognition, music synthesis, chatbots, and 
                                      machine translation using advanced architectures including CNNs, RNNs, LSTMs, ResNets, YOLO, U-Net, and Transformers."
+                        languages={["Python"]}
+                        frameworks={["TensorFlow", "Keras", "NumPy"]}
                     />
 
                     <ProjectCard
                         name="University Decisions Discord Bot"
                         img={OU}
-                        description="An AI-powered Discord bot in Python that consolidates and classifies university program admission averages using BERT (PyTorch) with search, view, and statistical analysis capabilities."
-                        link="https://devpost.com/software/idkkkkkkk" 
+                        description="An AI-powered Discord bot in Python that consolidates and classifies university program admission averages using BERT with search, view, and statistical analysis capabilities."
+                        link="https://github.com/jb-cheng/DecisionsBot_v2/tree/statistics" 
                         linkText="Learn more about the bot!"
+                        languages={["Python"]}
+                        frameworks={["Transformers", "Matplotlib", "Discord.py"]}
+                        tools={["Google Sheets API"]}
                     />
 
                     <ProjectCard
@@ -53,6 +62,20 @@ export default function Projects() {
                         description="A web-based ride-sharing application using the MVC architecture with Node.js, and Express.js, and Azure SQL. Passengers can browse available rides, post ride requests, and drivers can offer or accept rides seamlessly."
                         link="https://github.com/jb-cheng/OnMyWay" 
                         linkText="Learn more about RideShareRally!"
+                        languages={["HTML", "CSS", "JavaScript"]}
+                        frameworks={["Express.js", "EJS", "Bootstrap"]}
+                        tools={["Azure SQL", "Node.js"]}
+                    />
+
+                    <ProjectCard
+                        name="Ontario Vaccine Passport"
+                        img={VaxPass}
+                        description="A full-stack vaccine passport web application for Ontario using Flask and SQL. Medical professionals can update patient vaccination records and patients can generateunique QR codes displaying their vaccination status."
+                        link="https://github.com/jb-cheng/VaxPass" 
+                        linkText="Learn more about the Passport!"
+                        languages={["HTML", "CSS", "JavaScript", "Python"]}
+                        frameworks={["Flask", "Jinja", "Bootstrap"]}
+                        tools={["SQLite"]}
                     />
                 </div>
         </section>
