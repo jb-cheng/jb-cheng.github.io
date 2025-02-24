@@ -7,9 +7,17 @@ import LinkBar from './LinkBar';
 
 export default function About() {
     return (
-        <section className='white-bg' id="about">
+        <section className='white-bg' id="about" style={{
+            display: "block", 
+            width: "100%", 
+            padding: "5% 0", 
+            overflow: "visible",
+            height: "auto",
+            minHeight: "100vh"
+        }}>
                 <SideBar text="About Me" scrollAmount="200"/>
                 <SectionHeader text="About Me"/>
+                
                 <div className="about-container">
                     <div>
                         <p className="about-me-text">
