@@ -7,6 +7,7 @@
     margin-right: 10%;
     position: relative;
     left: 5%;
+    cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
 article {
@@ -21,6 +22,7 @@ article {
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
 article a::after {
@@ -28,6 +30,7 @@ article a::after {
   inset-block: 0;
   inset-inline: 0;
   content: "";
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
 /* basic article elements styling */
@@ -38,6 +41,7 @@ article h2 {
   letter-spacing: 0.06em;
   color: var(--title-color);
   transition: color 0.3s ease-out;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
 figure {
@@ -69,6 +73,7 @@ article a {
 
 article a:focus {
   outline: 1px dotted #28666e;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
 article a .icon {

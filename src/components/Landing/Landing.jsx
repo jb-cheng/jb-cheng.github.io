@@ -8,7 +8,7 @@ import ParticleBackground from './ParticleBackground';
 
 export default function Landing() {
     return (
-        <section style={{ backgroundColor: "#181818" }}>
+        <section id="landing" style={{ backgroundColor: "#181818" }}>
             <div className='particles-container'><ParticleBackground /></div>
             <div className='container'>
                 <div className="box">

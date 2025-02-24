@@ -5,4 +5,4 @@ export default function NavItem ({ targetId, children }) {
     };
   
     return <h2 className="menu-options" onClick={handleClick}>{children}</h2>;
-};
+  };

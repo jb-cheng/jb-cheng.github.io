@@ -1,48 +1,47 @@
 import { useState, useEffect } from 'react';
 
-const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+export default function ScrollToTop() {
+    const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    useEffect(() => {
+        // Show button when page is scrolled down 300px
+        const handleScroll = () => {
+            if (window.scrollY > 300) {
+              setVisible(true);
+            } else {
+              setVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    isVisible && (
-      <button
-        onClick={scrollToTop}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          padding: '10px',
-          borderRadius: '50%',
-          backgroundColor: '#007bff',
-          color: '#fff',
-          border: 'none',
-          cursor: 'pointer',
-        }}
-      >
-        ↑
-      </button>
-    )
-  );
+    return (
+        visible && (
+            <button
+                onClick={scrollToTop}
+                style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    padding: '10px',
+                    borderRadius: '50%',
+                    backgroundColor: '#007bff',
+                    color: '#ffffff',
+                    border: 'none',
+                    cursor: 'url(./assets/arrowhead-rounded-outline.png)'
+                }}
+            >
+              ↑
+            </button>
+        )
+    );
 };
-
-export default ScrollToTop;

@@ -1,11 +1,11 @@
 .about-container {
     display: flex;
     flex-direction: row;
-    position: relative;
     justify-content: center;
     gap: 100px;
-    margin: 10%;
-    left: 5%;
+    margin-top: 2%;
+    width: 80%;
+    height: 80%;
 }
 
 .about-me-text {
@@ -85,4 +85,12 @@
 
 .link-btn:hover {
     border-left: 9px solid #ff5900;
+}
+
+.email {
+    cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+}
+
+.email:hover {
+    background-color: #ff5900;
 }

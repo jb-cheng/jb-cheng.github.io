@@ -46,7 +46,14 @@ export default function About() {
                         </p>
                         <LinkBar/>
                     </div>
-                    <LogoGrid/>
+                    <div>
+                        <LogoGrid/>
+                        <p style={{position: "relative", fontSize: "1.25em", alignContent: "center", textAlign: "center"}}>
+                            Please contact me through my email: 
+                            <br />
+                            <a className='email' href="mailto:junbin.cheng@ontariotechu.net"> junbin.cheng@ontariotechu.net </a>
+                        </p>
+                    </div>
                 </div>
         </section>
     );
