@@ -3,10 +3,10 @@
     flex-direction: row;
     justify-content: flex-start; /* Align items to the left */
     gap: 100px;
-    margin-top: 2%;
+    margin-top: 1%;
     width: 80%;
     height: 80%;
-    margin-left: 13.75%;
+    margin-left: 14%;
 }
 
 .about-me-text {
@@ -75,6 +75,7 @@
     text-decoration: none;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
+    user-select: none;
 }
 
 .link-link {

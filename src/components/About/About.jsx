@@ -13,7 +13,8 @@ export default function About() {
             padding: "5% 0", 
             overflow: "visible",
             height: "auto",
-            minHeight: "100vh"
+            minHeight: "90vh",
+            paddingBottom: "0%"
         }}>
                 <SideBar text="About Me" scrollAmount="200"/>
                 <SectionHeader text="About Me"/>

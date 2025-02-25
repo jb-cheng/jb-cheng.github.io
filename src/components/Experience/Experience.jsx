@@ -16,7 +16,7 @@ export default function Experience() {
             padding: "20px 0", 
             overflow: "visible",
             height: "100%",
-            minHeight: "100vh"
+            minHeight: "100vh",
         }}>
             <SideBar text="Experience" scrollAmount="1100"/>
             <SectionHeader text="Experience"/>
