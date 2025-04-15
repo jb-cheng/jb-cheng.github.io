@@ -9,6 +9,7 @@ import ANN from '../../assets/projects/ANN.png';
 import OU from '../../assets/projects/OU.png';
 import RideShareRally from '../../assets/projects/ridesharerally.png';
 import VaxPass from '../../assets/projects/vaccine.png';
+import LabelLens from '../../assets/projects/lens.png';
 
 export default function Projects() {
     return (
@@ -21,16 +22,28 @@ export default function Projects() {
             minHeight: "100vh"
         }}>
                 <SideBar text="Projects" scrollAmount="1600"/>
-                <SectionHeader text="Projects"/>
+                {/* <SectionHeader text="Projects"/> */}
 
                 <div className='project-grid'>
+                    <ProjectCard 
+                        name="LabelLens" 
+                        img={LabelLens}
+                        link="https://devpost.com/software/LabelLens" 
+                        linkText="Learn more about LabelLens!"
+                        description="Award Winner at GenAI Genesis 2025."
+                        description2="An app that scans medicine labels and provides personalized reccommendations about the medicine's ingredients."
+                        languages={["HTML", "CSS", "Javascript", "Docker"]}
+                        frameworks={["React"]}
+                        tools={["Gemini", "Weviate", "Node.js", "RAG"]}
+                    /> 
+
                     <ProjectCard 
                         name="TuringSketch" 
                         img="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/207/371/datas/gallery.jpg"
                         link="https://devpost.com/software/idkkkkkkk" 
                         linkText="Learn more about TuringSketch!"
                         description="Award Winner at DeltaHacks XI."
-                        description2="Turing Test inspired game where players guess which image is AI generated and which is human drawn."
+                        description2="A Turing Test inspired game where players guess which image is AI generated and which is human drawn."
                         languages={["Python"]}
                         frameworks={["Streamlit"]}
                         tools={["pollinations.ai", "Azure SQL"]}

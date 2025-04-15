@@ -4,6 +4,7 @@ import SideBar from "../SideBar";
 import SectionHeader from '../SectionHeader';
 import Blueprint from '../../assets/jobs/Blueprint.png';
 import NSERC from '../../assets/jobs/NSERC.png';
+import CYM from '../../assets/jobs/CYM.png';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -19,8 +20,8 @@ export default function Experience() {
             minHeight: "100vh",
         }}>
             <SideBar text="Experience" scrollAmount="1100"/>
-            <SectionHeader text="Experience"/>
-            <div style={{position: "relative", paddingTop: "7%", left: "50%", transform: "translate(-50%, 0)"}}>
+            {/* <SectionHeader text="Experience"/> */}
+            <div style={{position: "relative", paddingTop: "0", left: "50%", transform: "translate(-50%, 0)"}}>
                 <VerticalTimeline lineColor='#EB9974'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -62,9 +63,10 @@ export default function Experience() {
                         className="vertical-timeline-element--work"
                         date="May 2023 - Aug 2023"
                         dateClassName='date'
-                        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                        iconStyle={{ background: 'rgb(255, 255, 255)', color: '#fff' }}
                         contentStyle={{ background: 'rgb(234, 224, 201)', color: '#fff' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(234, 224, 201)' }}
+                        icon={<img src={CYM} alt="CYM Logo" style={{width: "100%", height: "100%", userSelect: "none"}}/>}
                     >
                         <h3 className="vertical-timeline-element-title">Software Engineering Intern</h3>
                         <h4 className="vertical-timeline-element-subtitle">@ CYM Graphics</h4>

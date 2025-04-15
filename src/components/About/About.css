@@ -1,3 +1,9 @@
+i {
+    font-family: "Ms Madi", cursive;
+    font-size: 1.9em;
+    /* line-height: 0.7; */
+}
+
 .about-container {
     display: flex;
     flex-direction: row;
@@ -17,6 +23,10 @@
     /*top: 5%;
     left: 14%;*/
     color: black;
+}
+
+.about-me-text p {
+    
 }
 
 .logo-container {
@@ -40,8 +50,8 @@
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     transition: transform 0.5s ease-in-out;
     user-select: none;
