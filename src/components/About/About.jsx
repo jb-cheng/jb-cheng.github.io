@@ -21,22 +21,24 @@ export default function About() {
                 
                 <div className="about-container">
                     <div>
+                        <span className="circle"></span>
                         <p className="about-me-text">
+                            <div className='vert-line'></div>
                             <i>Hello, World!</i>&nbsp;&nbsp;&nbsp;My name is <b>Jun Bin</b> and I just complated my third year of software engineering <br /> at Ontario
-                            Tech university! &nbsp;I am passionate about <b>Machine Learning</b> and <b>Artificial Intelligence</b>, 
+                            Tech university! &nbsp;I'm passionate about <b>Machine Learning</b> and <b>Artificial Intelligence</b>, 
                             and <br />I love diving into projects that challenge me. &nbsp;In my free time, I like to go rock climbing, build Lego, <br />and play video games!
                             <br />
                             <br />
                             <br />
-                            ✨ <b>Currently I am: </b>
+                            &nbsp;&nbsp;Currently, I am:
                             <br />
                             {/* &nbsp;&nbsp;&nbsp;&nbsp;- 
                             <br /> */}
-                            &nbsp;&nbsp;&nbsp;&nbsp;- Doing NSERC USRA research under Dr. Annie Lee
+                            &nbsp;&nbsp;&nbsp;&nbsp;- Conducting an NSERC USRA-funded research project under Dr. Annie Lee, enhancing URIEL++, <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a multilingual NLP database for 8,000+ languages.
                             <br />
                             <br />
                             <br />
-                            🧭 <b>In the past, I have: </b>
+                            &nbsp;&nbsp;In the past, I have:
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;- Won three hackathons
                             <br />
@@ -52,13 +54,14 @@ export default function About() {
                             <br /> */}
                         </p>
                         <LinkBar/>
+                        <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
                     </div>
                     <div>
                         <LogoGrid/>
                         <p style={{position: "relative", fontSize: "1.25em", alignContent: "center", textAlign: "center"}}>
                             
                             <br />
-                            <a className='email' href="mailto:junbin.cheng@ontariotechu.net"> junbin.cheng@ontariotechu.net </a>
+                            {/* <a className='email' href="mailto:junbin.cheng@ontariotechu.net"> junbin.cheng@ontariotechu.net </a> */}
                         </p>
                     </div>
                 </div>

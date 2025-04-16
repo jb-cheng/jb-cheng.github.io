@@ -1,7 +1,8 @@
 i {
     font-family: "Ms Madi", cursive;
     font-size: 1.9em;
-    /* line-height: 0.7; */
+    line-height: 0.75;
+    color: black;
 }
 
 .about-container {
@@ -23,11 +24,20 @@ i {
     /*top: 5%;
     left: 14%;*/
     color: black;
+    position: relative;
 }
 
-.about-me-text p {
-    
+.circle {
+    height: 20em;
+    width: 20em;
+    background-color: #B2653B;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    margin-top: 12.5em;
+    margin-left: -20em;
 }
+
 
 .logo-container {
     /*display: flex;
@@ -65,6 +75,14 @@ i {
     transform: scale(1.1);
 }
 
+img {
+    user-select: none;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
 .link-bar {
     display: flex;
     justify-content: center;
@@ -93,13 +111,21 @@ i {
 }
 
 .link-btn:hover {
-    border-left: 9px solid #ff5900;
+    border-left: 9px solid #B2653B;
 }
 
-.email {
-    cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+.line {
+    background-color: #B2653B;
+    width: 6em;
+    height: 0.2em;
+    position: absolute;
+    left: 5%;
 }
 
-.email:hover {
-    background-color: #ff5900;
+.vert-line {
+    background-color: #B2653B;
+    height: 6em;
+    width: 0.2em;
+    position: absolute;
+    left: -0.5em;
 }
