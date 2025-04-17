@@ -25,6 +25,24 @@ i {
     left: 14%;*/
     color: black;
     position: relative;
+    margin-left: 1em;
+}
+
+
+.about-me-sub-text {
+    /*width: 80%;
+    height: 80%;*/
+    /*position: relative;*/
+    font-size: 1.25em;
+    /*top: 5%;
+    left: 14%;*/
+    color: black;
+    position: relative;
+    margin-left: 1em;
+}
+
+.about-me-sub-text:hover {
+    transform: scale(1.01);
 }
 
 .circle {
@@ -34,8 +52,8 @@ i {
     border-radius: 50%;
     position: absolute;
     display: block;
-    margin-top: 12.5em;
-    margin-left: -20em;
+    margin-top: 14em;
+    margin-left: -3.5em;
 }
 
 
