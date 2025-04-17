@@ -65,7 +65,7 @@ export default function About() {
                             <br /> */}
                         <LinkBar/>
                         {/* <AnimatedSignature/> */}
-                        {/* <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i> */}
+                        <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
                     </div>
                     <div>
                         <LogoGrid/>
