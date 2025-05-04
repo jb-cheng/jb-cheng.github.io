@@ -12,9 +12,6 @@ export default function LinkBar() {
             <img src={Email} alt="Email Icon" style={{width: '3em', height: '3em'}} onClick={() => window.location = 'mailto:junbin.cheng@ontariotechu.net'}/>
 
             <div className='link-btn' onClick={() => {window.open("https://drive.google.com/file/d/1uVpb3O3t0P0xEpFoOboiMue5ZQQycqUF/view?usp=sharing")}}>Resume</div>
-
-            {/* <div className='link-btn' onClick={() => {window.open("https://www.linkedin.com/in/jb-cheng/")}}>LinkedIn</div>
-            <div className='link-btn' onClick={() => {window.open("https://github.com/jb-cheng")}}>GitHub</div> */}
         </div>
     );
 };

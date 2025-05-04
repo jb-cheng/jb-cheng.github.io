@@ -63,6 +63,7 @@ function App() {
             {showDotNav && <DotNav />}
             {//<ScrollToTop/>   // Don't need this because of the dot nav?  might put it back later idk
             }
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
             <Landing />
             <About />
             <Experience />

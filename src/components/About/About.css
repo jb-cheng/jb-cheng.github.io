@@ -1,14 +1,7 @@
-i {
-    font-family: "Ms Madi", cursive;
-    font-size: 1.9em;
-    line-height: 0.75;
-    color: black;
-}
-
 .about-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
     gap: 100px;
     margin-top: 1%;
     width: 80%;
@@ -16,35 +9,34 @@ i {
     margin-left: 14%;
 }
 
+.about-me-text-container {
+    flex: 60;
+}
+
+/* Summary */
 .about-me-text {
-    /*width: 80%;
-    height: 80%;*/
-    /*position: relative;*/
     font-size: 1.25em;
-    /*top: 5%;
-    left: 14%;*/
     color: black;
     position: relative;
     margin-left: 1em;
+    flex: 69;
 }
 
-
+/* Bullet points (Currently/Accomplishments) */
 .about-me-sub-text {
-    /*width: 80%;
-    height: 80%;*/
-    /*position: relative;*/
     font-size: 1.25em;
-    /*top: 5%;
-    left: 14%;*/
     color: black;
     position: relative;
-    margin-left: 1em;
+    margin-left: 3em;
+    /* padding-left: 6em; */
+    text-indent:-2em;
+    max-width: 91%;
 }
-
 .about-me-sub-text:hover {
     transform: scale(1.01);
 }
 
+/* The circle on the left side */
 .circle {
     height: 20em;
     width: 20em;
@@ -56,22 +48,22 @@ i {
     margin-left: -3.5em;
 }
 
+/* Signature */
+i {
+    font-family: "Ms Madi", cursive;
+    font-size: 1.9em;
+    line-height: 0.75;
+    color: black;
+}
 
-.logo-container {
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;*/
-    /*position: relative;*/
-    
-    /*bottom: 8%;*/
+.about-me-logo-grid {
+    flex: 31;
 }
 
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 40px 0px;
     padding: 20px;
     /*justify-content: center;  Centers the grid */
     align-items: center;
@@ -84,8 +76,6 @@ i {
     transition: transform 0.5s ease-in-out;
     user-select: none;
 }
-
-/* Enlarging effects */
 .logo.active {
     transform: scale(1.1);
 }
@@ -93,14 +83,7 @@ i {
     transform: scale(1.1);
 }
 
-img {
-    user-select: none;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
+/* Email, Linkedin, GitHub Icons */
 .link-bar {
     display: flex;
     justify-content: center;
@@ -111,7 +94,25 @@ img:hover {
     height: 10%;
     gap: 50px;
 }
+.link-bar img {
+    user-select: none;
+}
+.link-bar img:hover {
+    transform: scale(1.1);
+}
 
+.logo-container img {
+    user-select: none;
+}
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+
+p img {
+    padding-right: 0.3em;
+}
+
+/* Resume Button */
 .link-btn {
     background-color: #333333;
     color: #faf6e6;
