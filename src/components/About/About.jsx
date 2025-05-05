@@ -9,23 +9,15 @@ import Chevron from '../../assets/chevron.svg';
 
 export default function About() {
     return (
-        <section className='white-bg' id="about" style={{
-            display: "block", 
-            width: "100%", 
-            padding: "5% 0", 
-            overflow: "visible",
-            height: "auto",
-            minHeight: "90vh",
-            paddingBottom: "0%"
-        }}>
+        <section className='white-bg' id="about">
                 <SideBar text="About Me" scrollAmount="200"/>
-                {/* <SectionHeader text="About Me"/> */}
+                <SectionHeader text="About Me"/>
                 <span className="circle"></span>
                 <div className="about-container">
                     <div className="about-me-text-container">
                         <p className="about-me-text" style={{marginLeft: "1em"}}>
                             <span className='vert-line'></span>
-                            <i>Hello, World!</i>&nbsp;&nbsp;&nbsp;My name is <b>Jun Bin</b> and I just complated my third year of software engineering at Ontario
+                            <i>Hello, World!</i>&nbsp;&nbsp;&nbsp;My name is <b>Jun Bin</b> and I just completed my third year of software engineering at Ontario
                             Tech university! &nbsp;I'm passionate about <b>Machine Learning</b> and <b>Artificial Intelligence</b>, 
                             and I love diving into projects that challenge me. &nbsp;In my free time, I like to go rock climbing, build Lego, and play video games!
                             <br />

@@ -75,7 +75,18 @@ section {
     left: 0;
     top: 0;
     margin-left: 0;
-    padding-left: 0;
+}
+
+.section-bar {
+    width: 33%;
+    min-width: 632px;
+    height: 63px;
+    transform-origin: top left;
+    background: #181818;
+    position: absolute;
+    top: 5%;
+    left: 14%;
+    display: none;
 }
 
 .section-header {
@@ -118,4 +129,21 @@ section {
     background: #121212;
     transform: scale(1.2); /* Enlarge the active dot slightly */
     cursor: url(./assets/arrowhead-rounded-outline.png), auto !important;
+}
+
+@media (max-width: 1780px) {
+    .side-text {
+        margin-left: -14%;
+    }
+}
+@media (max-width: 1573px) {
+    .side-text {
+        margin-left: -23%;
+    }
+}
+
+@media (max-width: 1560px) {
+    .section-bar {
+        display: block;
+    }
 }

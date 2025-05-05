@@ -1,28 +1,18 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-const Sidebar = ({ text, scrollAmount}) => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            setIsVisible(scrollY > scrollAmount); // Adjust threshold as needed
-        };
-
-        // Run immediately on page load to check initial scroll position
-        handleScroll(); 
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+const Sidebar = ({ text }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Animation will play only once when in view
+        threshold: 0.1, // Adjust threshold as needed
+    });
 
     return (
-        <div className="sidebar">
+        <div className="sidebar" ref={ref}>
             <motion.h1
                 className="side-text"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
                 transition={{ duration: 0.6 }}
             >
                 {text}
