@@ -100,6 +100,10 @@ section {
     left: 5%;
 }
 
+img {
+    user-select: none;
+}
+
 .dot-nav {
     position: fixed;
     right: 30px;
@@ -145,5 +149,14 @@ section {
 @media (max-width: 1560px) {
     .section-bar {
         display: block;
+        margin-left: -9%;
     }
-}
+
+    .sidebar {
+        display: none;
+    }
+
+    .circle {
+        display: none;
+    }
+}   

@@ -111,3 +111,10 @@ article:has(:hover, :focus) {
     white-space: nowrap;
     font-weight: 600;
 }
+
+@media (max-width: 1560px) {
+    .project-grid {
+        margin-top: 9em;
+        left: -1em;
+    }
+}

@@ -151,7 +151,7 @@ p img {
 
 @media (max-width: 1553px) {
     .vert-line {
-        height: 7.5em;
+        height: 6em;
     }
 }
 
@@ -170,6 +170,31 @@ p img {
     padding-bottom: 0%;
 }
 
+@media (max-width: 1560px) {
+    .circle {
+        display: none;
+    }
+    .about-container {
+        margin-left: 5%;
+        gap: 100px;
+        width: 85%;
+        margin-top: 2.5em;
+    }
+    .about-me-text-container {
+        flex: 70;
+        width: 200px;
+    }
+    .about-me-text {
+        padding-top: 1em;
+    }
+    .about-me-sub-text {
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+    }
+    .about-me-logo-grid {
+        flex: 40;
+    }
+}   
 @media (max-height: 860px) {
     #about {
         min-height: 100vh;

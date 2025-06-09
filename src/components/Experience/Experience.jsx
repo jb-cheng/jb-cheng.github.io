@@ -20,8 +20,8 @@ export default function Experience() {
             minHeight: "100vh",
         }}>
             <SideBar text="Experience" scrollAmount="1100"/>
-            {/* <SectionHeader text="Experience"/> */}
-            <div style={{position: "relative", paddingTop: "0", left: "50%", transform: "translate(-50%, 0)"}}>
+            <SectionHeader text="Experience"/>
+            <div className="job-container">
                 <VerticalTimeline lineColor='#EB9974'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"

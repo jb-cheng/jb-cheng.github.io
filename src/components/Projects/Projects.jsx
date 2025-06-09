@@ -22,7 +22,7 @@ export default function Projects() {
             minHeight: "100vh"
         }}>
                 <SideBar text="Projects" scrollAmount="1600"/>
-                {/* <SectionHeader text="Projects"/> */}
+                <SectionHeader text="Projects"/>
 
                 <div className='project-grid'>
                     <ProjectCard 

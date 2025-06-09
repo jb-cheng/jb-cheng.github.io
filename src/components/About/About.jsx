@@ -20,20 +20,14 @@ export default function About() {
                             <i>Hello, World!</i>&nbsp;&nbsp;&nbsp;My name is <b>Jun Bin</b> and I just completed my third year of software engineering at Ontario
                             Tech university! &nbsp;I'm passionate about <b>Machine Learning</b> and <b>Artificial Intelligence</b>, 
                             and I love diving into projects that challenge me. &nbsp;In my free time, I like to go rock climbing, build Lego, and play video games!
-                            <br />
-                            <br />
-                            <br />
                         </p>
-                        <p className="about-me-sub-text">
+                        <p className="about-me-sub-text" id="currently">
                             <img src={Chevron} style={{width: "1em"}}/>
                             Currently, I am:
                             <br />
                             ↳ Conducting an NSERC USRA-funded research project under Dr. Annie Lee, enhancing URIEL++, a multilingual NLP database for 8,000+ languages.
-                            <br />
-                            <br />
-                            <br />
                         </p>
-                        <p className="about-me-sub-text">
+                        <p className="about-me-sub-text" id="past">
                             <img src={Chevron} style={{width: "1em"}}/>
                             In the past, I have:
                             <br />
@@ -42,8 +36,6 @@ export default function About() {
                             ↳ Achieved a cumulative GPA of 4.0
                             <br />
                             ↳ Recevied two NSERC USRA undergraduate research awards
-                            <br />
-                            <br />
                         </p>
                         <LinkBar/>
                         <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
