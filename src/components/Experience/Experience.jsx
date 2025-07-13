@@ -5,6 +5,7 @@ import SectionHeader from '../SectionHeader';
 import Blueprint from '../../assets/jobs/Blueprint.png';
 import NSERC from '../../assets/jobs/NSERC.png';
 import CYM from '../../assets/jobs/CYM.png';
+import otuxuoft from '../../assets/jobs/otuxuoft.png';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -25,7 +26,27 @@ export default function Experience() {
                 <VerticalTimeline lineColor='#EB9974'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        date="2024 - Present"
+                        date="May 2025 - Present"
+                        dateClassName='date'
+                        contentStyle={{ background: 'rgb(234, 224, 201)', color: '#fff' }}
+                        contentArrowStyle={{ borderRight: '7px solid  rgb(234, 224, 201)' }}
+                        iconStyle={{ background: 'rgb(0, 120, 232)', color: '#fff' }}
+                        icon={<img src={otuxuoft} alt="OTU and UofT Logo" style={{width: "100%", height: "100%", userSelect: "none"}}/>}
+                    >
+                        <h3 className="vertical-timeline-element-title">NLP Researcher</h3>
+                        <h4 className="vertical-timeline-element-subtitle">@ L^3 Lab</h4>
+                        <p>
+                            • Designed a linguistic feature selection method for a cross-lingual knowledge base of 8,000+ languages, resulting in a 50% reduction in dimensions without accuracy loss.
+                            <br />
+                            • Engineered an LLM data-imputation system (GPT-4o/Claude/Gemini) to expand low-resource language coverage.
+                            <br />
+                            • Co-authored a workshop paper at MELT 2025 on cross-lingual language subset selection (under review).
+                        </p>
+                    </VerticalTimelineElement>
+
+                    {/* <VerticalTimelineElement
+                        className="vertical-timeline-element--work"
+                        date="Oct 2024 - Present"
                         dateClassName='date'
                         contentStyle={{ background: 'rgb(234, 224, 201)', color: '#fff' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(234, 224, 201)' }}
@@ -39,7 +60,7 @@ export default function Experience() {
                             <br />
                             • Lead workflows and foster collaboration among executives, developers, and contributors to ensure client-centered product delivery and high-quality outcomes.
                         </p>
-                    </VerticalTimelineElement>
+                    </VerticalTimelineElement> */}
 
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
