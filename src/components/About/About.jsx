@@ -4,6 +4,7 @@ import SideBar from "../SideBar";
 import SectionHeader from '../SectionHeader';
 import LogoGrid from './LogoGrid';
 import LinkBar from './LinkBar';
+import Donut from '../Donut';
 
 import Chevron from '../../assets/chevron.svg';
 
@@ -26,6 +27,8 @@ export default function About() {
                             Currently, I am:
                             <br />
                             ↳ Conducting an NSERC USRA-funded research project under Dr. Annie Lee, enhancing URIEL++, a multilingual NLP database for 8,000+ languages.
+                            <br />
+                            ↳ Organizing Ontario Tech University's Hackathon and Computer Science Club events.
                         </p>
                         <p className="about-me-sub-text" id="past">
                             <img src={Chevron} style={{width: "1em"}}/>
@@ -37,12 +40,27 @@ export default function About() {
                             <br />
                             ↳ Recevied two NSERC USRA undergraduate research awards
                         </p>
+                        <i style={{position: "absolute", marginTop: "0.2em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
                         <LinkBar/>
-                        <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
+                        {/* <i style={{position: "absolute", marginTop: "1em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i> */}
                     </div>
                     <div className="about-me-logo-grid">
                         <LogoGrid/>
                     </div>
+                </div>
+                <div style={{
+                    width: "100vw",
+                    height: "1.5em",
+                    backgroundColor: "#B2653B",
+                    position: "absolute",
+                    left: 0,
+                    bottom: "7em"
+                }}>
+                {/* <div className="about-me-repeating-text"> */}
+                    {Array.from({ length: 20 }).map((_, i) => (
+                        <span key={i} style={{marginRight: "1em", fontWeight: "bold", color: "white", marginBottom: "3px"}}>ABOUT ME</span>
+                    ))}
+                {/* </div> */}
                 </div>
         </section>
     );

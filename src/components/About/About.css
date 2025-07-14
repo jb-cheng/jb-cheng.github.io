@@ -88,11 +88,10 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*position: relative;*/
-    top: 35%;
-    /*right: 31%;*/
+    /* top: 35%; */
     height: 10%;
     gap: 50px;
+    margin-top: 8em;
 }
 .link-bar img {
     user-select: none;

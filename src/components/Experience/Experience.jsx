@@ -30,7 +30,7 @@ export default function Experience() {
                         dateClassName='date'
                         contentStyle={{ background: 'rgb(234, 224, 201)', color: '#fff' }}
                         contentArrowStyle={{ borderRight: '7px solid  rgb(234, 224, 201)' }}
-                        iconStyle={{ background: 'rgb(0, 120, 232)', color: '#fff' }}
+                        iconStyle={{ background: 'rgb(68, 85, 90)', color: '#fff' }}
                         icon={<img src={otuxuoft} alt="OTU and UofT Logo" style={{width: "100%", height: "100%", userSelect: "none"}}/>}
                     >
                         <h3 className="vertical-timeline-element-title">NLP Researcher</h3>
@@ -44,7 +44,7 @@ export default function Experience() {
                         </p>
                     </VerticalTimelineElement>
 
-                    {/* <VerticalTimelineElement
+                    <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         date="Oct 2024 - Present"
                         dateClassName='date'
@@ -60,7 +60,7 @@ export default function Experience() {
                             <br />
                             • Lead workflows and foster collaboration among executives, developers, and contributors to ensure client-centered product delivery and high-quality outcomes.
                         </p>
-                    </VerticalTimelineElement> */}
+                    </VerticalTimelineElement>
 
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
