@@ -10,6 +10,7 @@ import OU from '../../assets/projects/OU.png';
 import RideShareRally from '../../assets/projects/ridesharerally.png';
 import VaxPass from '../../assets/projects/vaccine.png';
 import LabelLens from '../../assets/projects/lens.png';
+import Donut from '../Donut';
 
 export default function Projects() {
     return (
@@ -17,12 +18,23 @@ export default function Projects() {
             display: "block", 
             width: "100%", 
             padding: "20px 0", 
-            overflow: "visible",
+            overflow: "hidden",
             height: "auto",
             minHeight: "100vh"
         }}>
                 <SideBar text="Projects" scrollAmount="1600"/>
                 <SectionHeader text="Projects"/>
+
+                <div style={{
+                position: 'absolute',
+                bottom: '8%',        /* Move up/down (0% = top, 100% = bottom) */
+                left: '-15%',       /* Move left/right (0% = left, 100% = right) */
+                // transform: 'translate(-50%, -50%)', /* Fine-tune centering */
+                // opacity: 0.1
+                zIndex: 0
+            }}>
+                <Donut size={1750} colors={['#F9F4EB', '#F9F4EB', '#F9F4EB', '#F9F4EB']} />
+            </div>
 
                 <div className='project-grid'>
                     <ProjectCard 

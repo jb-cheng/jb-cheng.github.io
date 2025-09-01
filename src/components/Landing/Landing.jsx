@@ -10,7 +10,7 @@ import RhinePause from '../../assets/RhinePause.png';
 import AdAstra from '../../assets/AdAstraQuiet.mp3';
 
 export default function Landing() {
-    // Add a simple audio element and play/pause on click
+    // Play Music on Click
     const handlePlayMusic = () => {
         const audio = document.getElementById('landing-audio');
         if (audio) {
@@ -37,7 +37,11 @@ export default function Landing() {
                 loop
                 style={{ display: 'none' }}
             />
-            <Donut size={2000} colors={['#2A2A2A', '#2A2A2A', '#2A2A2A', '#2A2A2A']} />
+            <div
+                style={{ opacity: 0.15 }}
+            >
+                <Donut size={2000} colors={['#2A2A2A', '#2A2A2A', '#2A2A2A', '#2A2A2A']} />
+            </div>
             <img
                 src={RhinePause}
                 alt="Rhine Pause"

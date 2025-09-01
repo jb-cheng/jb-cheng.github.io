@@ -234,3 +234,23 @@ p img {
         min-height: 170vh;
     }
 }
+
+.arrow-list {
+    list-style: none;
+    padding-left: 1.5em;
+    margin: 0 0;
+}
+
+.arrow-list li {
+    color: #222;
+    white-space: normal;
+    /* text-indent: 0; */
+    padding-left: 0;
+}
+
+.arrow-list li::before {
+    content: "↳";
+    margin-right: 0.5em;
+    color: #222;
+    font-weight: bold;
+}

@@ -24,19 +24,21 @@ export default function ProjectCard({name, img, link, linkText, description, des
                         {/* For each list of items, add a div of the corresponding colour to the div */}
                         {colourMapping.map(({ items, colour }, index) =>
                             items.map((item, i) => (
-                                <div className='tool' style={{color: colour}}>
+                                <div className='tool' style={{color: colour}} key={`${index}-${i}`}>
                                     {item}
                                 </div>
                             ))
                         )}
                     </div>
                     <br />
-                    <a href={link} target="_blank" className="read-more">
-                        <span class="sr-only">{linkText}</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                    </a>
+                    {linkText && (
+                        <a href={link} target="_blank" className="read-more" rel="noopener noreferrer">
+                            <span className="sr-only">{linkText}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 20 20" fill="currentColor">
+                                <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                            </svg>
+                        </a>
+                    )}
                 </div>
             </div>
         </article>

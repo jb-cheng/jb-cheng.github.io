@@ -34,13 +34,34 @@ body {
 /* This is required to hide the particles */
 .white-bg {
     width: 100%;
-    background-color: #f5eddd;
+    /* background-color: #f5eddd; */
     opacity: 1;
-    background-image: linear-gradient(#F1EAD9 4px, transparent 4px), linear-gradient(to right, #F1EAD9 4px, #f5eddd 4px);
-    background-size: 80px 80px;
+    /* background-image: linear-gradient(#F1EAD9 4px, transparent 4px), linear-gradient(to right, #F1EAD9 4px, #f5eddd 4px); */
+    /* background-size: 80px 80px; */
     position: relative;
-}
 
+  --s: 160px; /* control the size*/
+  --c1: #f5eddd;
+  --c2: #f5eddd;
+  --c3: #f5eddd;
+  --c4: #f5eddd;
+  --c5: #F1EAD9;
+  
+  --_g: var(--c1) 25%,var(--c2) 0 50%,#0000 0;
+  --_l1: var(--c5) 0 1px,#0000 0 calc(25% - 1px),var(--c5) 0 25%;
+  --_l2: var(--c5) 0 1px,#0000 0 calc(50% - 1px),var(--c5) 0 50%;
+  background:
+    repeating-linear-gradient( 45deg,var(--_l1)),
+    repeating-linear-gradient(-45deg,var(--_l1)),
+    repeating-linear-gradient(  0deg,var(--_l2)),
+    repeating-linear-gradient( 90deg,var(--_l2)),
+    conic-gradient(from 135deg at 25% 75%,var(--_g)),
+    conic-gradient(from 225deg at 25% 25%,var(--_g)),
+    conic-gradient(from  45deg at 75% 75%,var(--_g)),
+    conic-gradient(from -45deg at 75% 25%,var(--_g)),
+    repeating-conic-gradient(var(--c3) 0 45deg,var(--c4) 0 90deg);  
+  background-size: var(--s) var(--s);
+}
 section {
     display: flex;
     justify-content: center;
@@ -144,7 +165,6 @@ img {
     left: 50%;
     transform: translate(0, -70%);
     z-index: 0;
-    opacity: 0.15; /* Temporarily make it fully visible */
     pointer-events: none;
     overflow: hidden;
 }
@@ -168,12 +188,20 @@ img {
     transform: scale(1.02);
 }
 
-/* Apply Albert Sans font to VerticalTimelineElement paragraphs */
-/* .vertical-timeline-element p {
-    font-family: 'Albert Sans', sans-serif !important;
-    font-weight: 400;
-    font-style: normal;
-} */
+.vertical-timeline-element p {
+    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+/* Also target the title and subtitle if needed */
+.vertical-timeline-element-title {
+    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
+
+.vertical-timeline-element-subtitle {
+    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+}
 
 /* Animation for filling the rings */
 @keyframes fillRing {
