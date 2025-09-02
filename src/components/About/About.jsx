@@ -21,24 +21,24 @@ export default function About() {
                             Tech university! &nbsp;I'm passionate about <b>Machine Learning</b> and <b>Artificial Intelligence</b>, 
                             and I love diving into projects that challenge me. &nbsp;When I'm not programming, I enjoy rock climbing, building Lego, and playing video games!
                         </p>
-                        <p className="about-me-sub-text" id="currently">
+                        <div className="about-me-sub-text">
                             <img src={Chevron} style={{width: "1em"}}/>
-                            Currently, I am:
+                            <span>Currently, I am:</span>
                             <ul className="arrow-list">
                                 <li>Working as a Software Developer on the internal tooling team at H.H. Angus</li>
                                 <li>Organizing Ontario Tech University's annual Hackathon and Computer Science Club events</li>
                                 <li>Reading 'Designing Machine Learning Systems' by Chip Huyen</li>
                             </ul>
-                        </p>
-                        <p className="about-me-sub-text" id="past">
+                        </div>
+                        <div className="about-me-sub-text">
                             <img src={Chevron} style={{width: "1em"}}/>
-                            In the past, I have:
+                            <span>In the past, I have:</span>
                             <ul className="arrow-list">
                                 <li>Won three hackathons, most recently at Canada's largest AI hackathon</li>
                                 <li>Achieved a cumulative GPA of 4.0</li>
                                 <li>Recevied two NSERC USRA undergraduate research awards</li>
                             </ul>
-                        </p>
+                        </div>
                         <i style={{position: "absolute", marginTop: "0.2em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
                         <LinkBar/>
                     </div>

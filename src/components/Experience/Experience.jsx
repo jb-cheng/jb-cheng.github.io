@@ -6,7 +6,12 @@ import Blueprint from '../../assets/jobs/Blueprint.png';
 import NSERC from '../../assets/jobs/NSERC.png';
 import CYM from '../../assets/jobs/CYM.png';
 import OTUAndUofT from '../../assets/jobs/otuxuoft.png';
+
 import AlignFreeze from '../../assets/alignfreeze_diagram.png';
+import BlueWebsite from '../../assets/bluewebsite.png';
+import Stonks from '../../assets/ibkrweb.png';
+import Catalogue from '../../assets/cymweb.png';
+
 import Donut from '../Donut';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
@@ -49,7 +54,7 @@ export default function Experience() {
             }} />
 
             <div className="job-container">
-                <img src={AlignFreeze} 
+                {/* <img src={AlignFreeze} 
                 alt="Drone" 
                 className="experience-image"
                 style={{ 
@@ -62,7 +67,7 @@ export default function Experience() {
                     borderRadius: "10px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
                 }}
-                />
+                /> */}
                 <VerticalTimeline lineColor='#EB9974'>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -87,6 +92,23 @@ export default function Experience() {
                             <br />
                             • Co-authored a workshop paper at MELT 2025 on cross-lingual language subset selection (under review).
                         </p>
+                        <img src={AlignFreeze} 
+                        alt="Diagram of Experimental Pipeline" 
+                        className="experience-image"
+                        style={{ 
+                            width: "100%",
+                            height: "16em",
+                            objectFit: "cover",
+                            objectPosition: "0 0",
+                            position: "absolute", 
+                            top: "5%", 
+                            left: "130%", 
+                            // transform: "translateX(-50%)", 
+                            zIndex: 1, 
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
+                        }}
+                        />
                     </VerticalTimelineElement>
 
                     <VerticalTimelineElement
@@ -111,6 +133,23 @@ export default function Experience() {
                             <br />
                             • Lead workflows and foster collaboration among executives, developers, and contributors to ensure client-centered product delivery and high-quality outcomes.
                         </p>
+                        <img src={BlueWebsite} 
+                        alt="Diagram of Experimental Pipeline" 
+                        className="experience-image"
+                        style={{ 
+                            width: "100%",
+                            height: "16em",
+                            objectFit: "cover",
+                            objectPosition: "0 0",
+                            position: "absolute", 
+                            top: "5%", 
+                            right: "130%", 
+                            // transform: "translateX(-50%)", 
+                            zIndex: 1, 
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
+                        }}
+                        />
                     </VerticalTimelineElement>
 
                     <VerticalTimelineElement
@@ -135,6 +174,23 @@ export default function Experience() {
                             <br />
                             • Designed and implemented a data pipeline for the acquisition and preparation of daily Options trading data with up to 1 second resolutions, that optimized input for machine learning models.
                         </p>
+                        <img src={Stonks} 
+                        alt="Diagram of Experimental Pipeline" 
+                        className="experience-image"
+                        style={{ 
+                            width: "100%",
+                            height: "16em",
+                            objectFit: "cover",
+                            objectPosition: "0 0",
+                            position: "absolute", 
+                            top: "5%", 
+                            left: "130%", 
+                            // transform: "translateX(-50%)", 
+                            zIndex: 1, 
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
+                        }}
+                        />
                     </VerticalTimelineElement>
 
                     <VerticalTimelineElement
@@ -159,6 +215,23 @@ export default function Experience() {
                             <br />
                             • Implemented a JavaScript search filter for the in-house B2B e-commerce platform
                         </p>
+                        <img src={Catalogue} 
+                        alt="Diagram of Experimental Pipeline" 
+                        className="experience-image"
+                        style={{ 
+                            width: "100%",
+                            height: "16em",
+                            objectFit: "cover",
+                            objectPosition: "0 0",
+                            position: "absolute", 
+                            top: "5%", 
+                            right: "130%", 
+                            // transform: "translateX(-50%)", 
+                            zIndex: 1, 
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
+                        }}
+                        />
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>
