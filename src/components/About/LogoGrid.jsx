@@ -13,51 +13,51 @@ import Docker from "../../assets/logos/Docker.svg";
 import Azure from "../../assets/logos/Azure.svg";
 
 const logos = [
-    { src: Python, alt: "Python" },
-    { src: Java, alt: "Java" },
-    { src: CPlusPlus, alt: "C++" },
-    { src: PyTorch, alt: "PyTorch" },
-    { src: NumPy, alt: "NumPy" },
-    { src: Tensorflow, alt: "TensorFlow" },
-    { src: React, alt: "React" },
-    { src: JS, alt: "JavaScript" },
-    { src: NodeJS, alt: "Node.js" },
-    { src: SQL, alt: "SQL" },
-    { src: Docker, alt: "Docker" },
-    { src: Azure, alt: "Azure" }
+  { src: Python, alt: "Python" },
+  { src: Java, alt: "Java" },
+  { src: CPlusPlus, alt: "C++" },
+  { src: PyTorch, alt: "PyTorch" },
+  { src: NumPy, alt: "NumPy" },
+  { src: Tensorflow, alt: "TensorFlow" },
+  { src: React, alt: "React" },
+  { src: JS, alt: "JavaScript" },
+  { src: NodeJS, alt: "Node.js" },
+  { src: SQL, alt: "SQL" },
+  { src: Docker, alt: "Docker" },
+  { src: Azure, alt: "Azure" }
 ];
 
 
 export default function LogoGrid() {
-    const [activeLogo, setActiveLogo] = useState(null);
+  const [activeLogo, setActiveLogo] = useState(null);
 
-    // Change the active logo every 2 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-            // Choose a random logo to set as active
-            setActiveLogo(Math.floor(Math.random() * logos.length));
+  // Change the active logo every 2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Choose a random logo to set as active
+      setActiveLogo(Math.floor(Math.random() * logos.length));
 
-            // Reset the active logo after 1 second
-            setTimeout(() => {
-                setActiveLogo(null);
-            }, 1000);
-        }, 2000);
+      // Reset the active logo after 1 second
+      setTimeout(() => {
+        setActiveLogo(null);
+      }, 1000);
+    }, 2000);
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
-    return (
-        <div className="logo-container">
-            <div className="logo-grid">
-                {logos.map((logo, index) => (
-                    <img
-                        key={index}
-                        src={logo.src}
-                        alt={logo.alt}
-                        className={`logo ${index === activeLogo ? "active" : ""}`}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <div className="logo-container">
+      <div className="logo-grid">
+        {logos.map((logo, index) => (
+          <img
+            key={index}
+            src={logo.src}
+            alt={logo.alt}
+            className={`logo ${index === activeLogo ? "active" : ""}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
