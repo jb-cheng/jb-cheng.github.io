@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi');
 /* Red bar transition for loading */
+.loading-circle {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 70vw;
+    background: #181818;
+    border-radius: 50%;
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: none;
+    box-shadow: 0 0 10em 5em rgb(246, 207, 169);
+}
 /* Green-yellow-red gradient bar transition for loading */
 .red-bar-transition {
     position: fixed;
@@ -109,9 +126,6 @@
     pointer-events: none;
     overflow: hidden;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ms+Madi');
 
 * {
     cursor: 'url(./assets/arrowhead-rounded-outline.png)'
@@ -350,10 +364,6 @@ img {
     }
 
     .sidebar {
-        display: none;
-    }
-
-    .circle {
         display: none;
     }
 }

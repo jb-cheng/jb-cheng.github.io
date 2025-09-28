@@ -118,18 +118,17 @@ export default function Experience() {
               <span style={{display: "inline", fontSize: "1rem", color: "black", fontFamily: "inherit", float: "right"}}>Sep 2025 - Present</span>
             </div>
             <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">H.H. Angus and Associates Ltd.</h4>
-            <p>
-              • Revit Scripting using Dynamo.
-              <br />
-              • Excel Spreadsheet Quality Assurance.
-            </p>
+            <ul className="job-detail-list">
+              <li>Developing and maintaining in-house Revit plugins using C#, Dynamo and the Revit API to automate design workflows, improving efficiency for 50+ engineers.</li>
+              <li>Identified and rectified critical flaws in a production-level script for BIM validation, which was generating erroneous reports 90% of the time due to unhandled edge cases.</li>
+            </ul>
             <TiltImage
               src={hhangusJob}
               alt="Revit Screenshot"
               className="experience-image"
               style={{ 
                 width: "101%",
-                height: "11em",
+                height: "16em",
                 objectFit: "cover",
                 objectPosition: "0 0",
                 position: "absolute", 
@@ -157,14 +156,12 @@ export default function Experience() {
               <h3 className="vertical-timeline-element-title" style={{display: "inline", marginRight: "10px", float: "left"}}>NLP Researcher</h3>
               <span style={{display: "inline", fontSize: "1rem", color: "black", fontFamily: "inherit", float: "right"}}>May 2025 - Aug 2025</span>
             </div>
-            <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">L<sup style={{fontSize: "75%"}}>3</sup> Lab</h4>
-            <p>
-              • Designed a linguistic feature selection method for a cross-lingual knowledge base of 8,000+ languages, resulting in a 50% reduction in dimensions without accuracy loss.
-              <br />
-              • Engineered an LLM data-imputation system (GPT-4o/Claude/Gemini) to expand low-resource language coverage.
-              <br />
-              • Co-authored a workshop paper at MELT 2025 on cross-lingual language subset selection (under review).
-            </p>
+            <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">L<sup style={{fontSize: "75%"}}>3</sup> Lab (University of Toronto/Ontario Tech University)</h4>
+            <ul className="job-detail-list">
+              <li>Designed a linguistic feature selection method for a cross-lingual knowledge base of 8,000+ languages, resulting in a 50% reduction in dimensions without accuracy loss.</li>
+              <li>Engineered an LLM data-imputation system (GPT-4o/Claude/Gemini) to expand low-resource language coverage.</li>
+              <li>Co-authored a workshop paper at MELT 2025 on cross-lingual language subset selection (under review).</li>
+            </ul>
             <TiltImage
               src={AlignFreeze}
               alt="Diagram of Experimental Pipeline"
@@ -201,11 +198,10 @@ export default function Experience() {
               <span style={{display: "inline", fontSize: "1rem", color: "black", fontFamily: "inherit", float: "right"}}>Sep 2024 - Apr 2025</span>
             </div>
             <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">OTU Blueprint</h4>
-            <p>
-              • Direct Ontario Tech University's first Blueprint chapter, a student organization originating from UC Berkeley that develops pro-bono technological solutions for non-profits.
-              <br />
-              • Lead workflows and foster collaboration among executives, developers, and contributors to ensure client-centered product delivery and high-quality outcomes.
-            </p>
+            <ul className="job-detail-list">
+              <li>Direct Ontario Tech University's first Blueprint chapter, a student organization originating from UC Berkeley that develops pro-bono technological solutions for non-profits.</li>
+              <li>Lead workflows and foster collaboration among executives, developers, and contributors to ensure client-centered product delivery and high-quality outcomes.</li>
+            </ul>
             <TiltImage
               src={BlueWebsite}
               alt="Diagram of Experimental Pipeline"
@@ -242,11 +238,10 @@ export default function Experience() {
               <span style={{display: "inline", fontSize: "1rem", color: "black", fontFamily: "inherit", float: "right"}}>May 2024 - Aug 2024</span>
             </div>
             <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">Natural Sciences & Engineering Research Council, Canada</h4>
-            <p>
-              • Developed an AI-driven stock Options trading bot using the Interactive Brokers API, that streamlined and democratized Options trading for broad audiences.
-              <br />
-              • Designed and implemented a data pipeline for the acquisition and preparation of daily Options trading data with up to 1 second resolutions, that optimized input for machine learning models.
-            </p>
+            <ul className="job-detail-list">
+              <li>Developed an AI-driven stock Options trading bot using the Interactive Brokers API, that streamlined and democratized Options trading for broad audiences.</li>
+              <li>Designed and implemented a data pipeline for the acquisition and preparation of daily Options trading data with up to 1 second resolutions, that optimized input for machine learning models.</li>
+            </ul>
             <TiltImage
               src={Stonks}
               alt="Diagram of Experimental Pipeline"
@@ -283,11 +278,10 @@ export default function Experience() {
               <span style={{display: "inline", fontSize: "1rem", color: "black", fontFamily: "inherit", float: "right"}}>May 2023 - Aug 2023</span>
             </div>
             <h4 style={{display: "block", clear: "both"}} className="vertical-timeline-element-subtitle">CYM Graphics</h4>
-            <p>
-              • Established an Azure-based database for personnel info and product ID tags, that integrates with an Arduino RFID tag reader to enable cloud-based system management for staff and customers.
-              <br />
-              • Implemented a JavaScript search filter for the in-house B2B e-commerce platform
-            </p>
+            <ul className="job-detail-list">
+              <li>Established an Azure-based database for personnel info and product ID tags, that integrates with an Arduino RFID tag reader to enable cloud-based system management for staff and customers.</li>
+              <li>Implemented a JavaScript search filter for the in-house B2B e-commerce platform</li>
+            </ul>
             <TiltImage
               src={Catalogue}
               alt="picture of catalogue website"

@@ -13,6 +13,10 @@
     flex: 60;
 }
 
+#hello {
+    padding-right: 0.5em;
+}
+
 /* Summary */
 .about-me-text {
     font-size: 1.25em;

@@ -33,7 +33,7 @@ function App() {
     }
   }, []);
 
-  // Show red bar transition after loading
+  // Show 3 colour bar transition after loading
   useEffect(() => {
     let transitionEndHandler;
     let fallbackTimeout;
@@ -111,35 +111,39 @@ function App() {
         )}
             {showTransition && (
                 <div className="scanlines loading-overlay">
-                  <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-                    <div ref={transitionRef} className="red-bar-transition">
-                      <div className="bar-colors-container">
-                        <div className="bar-left" />
-                        <div className="bar-center" />
-                        <div className="bar-right" />
-                      </div>
-                    </div>
-                    {/* Stationary name behind bar */}
-                    <div
-                      className={fadeOutName ? 'fade-out-name' : ''}
-                      style={{
-                        position: 'absolute',
-                        top: 'calc(10% + 10vh)',
-                        left: 0,
-                        width: '100vw',
-                        textAlign: 'center',
-                        fontSize: '10em',
-                        fontWeight: 'bold',
-                        color: '#faf6e5',
-                        letterSpacing: '0.05em',
-                        zIndex: 1999,
-                        pointerEvents: 'none',
-                        fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                        transition: 'opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s'
-                      }}
-                    >
-                      JUN BIN CHENG
-                    </div>
+                  <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                            {/* Huge circle behind everything */}
+                            <div className="loading-circle"></div>
+                            <div ref={transitionRef} className="red-bar-transition">
+                              <div className="bar-colors-container">
+                                <div className="bar-left" />
+                                <div className="bar-center" />
+                                <div className="bar-right" />
+                              </div>
+                            </div>
+                            <div
+                              className={fadeOutName ? 'fade-out-name' : ''}
+                              style={{
+                                position: 'absolute',
+                                top: 'calc(10% + 10vh)',
+                                left: 0,
+                                width: '100vw',
+                                textAlign: 'center',
+                                fontSize: '10em',
+                                fontWeight: 'bold',
+                                color: '#f9ead3',
+                                letterSpacing: '0.05em',
+                                zIndex: 1999,
+                                pointerEvents: 'none',
+                                fontFamily: 'Poppins, Inter, Arial, sans-serif',
+                                transition: 'opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s',
+                                textShadow: '0 0 2px #fac16b, 0 0 2px #fac16b, 0 0 2px #fac16b'
+                              }}
+                            >
+                              JUN BIN CHENG
+                              <br/>
+                              鄭俊斌
+                            </div>
                   </div>
                 </div>
         )}
