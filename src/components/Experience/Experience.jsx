@@ -72,7 +72,7 @@ export default function Experience() {
         <Donut size={1500} colors={['#F1E6D0', '#F1E6D0', '#F1E6D0', '#F1E6D0']} />
       </div>
 
-      <div style={{
+      {/* <div style={{
         width: 43.29, 
         height: 9.94, 
         left: '3%', 
@@ -83,7 +83,7 @@ export default function Experience() {
         borderRadius: 9999, 
         border: '3px #B3643B solid',
         zIndex: 2
-      }} />
+      }} /> */}
 
       <div className="job-container">
         {/* <img src={AlignFreeze} 

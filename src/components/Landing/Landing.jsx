@@ -40,8 +40,9 @@ export default function Landing() {
       
       <img
         src={RhinePause}
-        alt="Rhine Pause"
+        alt="Play Music: Ad Astra by Steven Grove"
         onClick={handlePlayMusic}
+        title="Ad Astra"
         style={{
           position: 'absolute',
           top: 0,
@@ -60,7 +61,7 @@ export default function Landing() {
       <div className='container'>
         <div className="box">
           <img src={Rings} alt="Concentric Rings" style={{ opacity: 0.3, position: "relative", top: "5.5%", left: "4.5%", userSelect: "none"}}/>
-          <div className="SWE-text-wrapper">4A Software Engineering Student</div>
+          <div className="SWE-text-wrapper">4th Year Software Engineering Student</div>
           <h1 className='title'>JUN BIN CHENG</h1>
           <WideThreeColourBar />
         </div>
