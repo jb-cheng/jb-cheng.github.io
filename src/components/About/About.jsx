@@ -33,13 +33,14 @@ export default function About() {
           </div>
           <div className="about-me-sub-text">
             <img src={Chevron} style={{width: "1em"}}/>
-            <span>Recent Highlights:</span>
+            <span>In the past, I have:</span>
             <ul className="arrow-list">
               <li>Won three hackathons, most recently at Canada's largest AI hackathon</li>
-              <li>Awarded two NSERC USRA undergraduate research awards</li>
+              <li>Received two NSERC USRA undergraduate research awards</li>
+              <li>Been awarded consecutive scholarships for academic excellence</li>
             </ul>
           </div>
-          <i style={{position: "absolute", marginTop: "0.5em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>
+          <i style={{userSelect: "none", position: "absolute", marginTop: "0.5em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng</i>
           <LinkBar/>
         </div>
         <div className="about-me-logo-grid">
