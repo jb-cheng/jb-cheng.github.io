@@ -23,20 +23,20 @@ export default function About() {
           </p>
           <div className="about-me-sub-text">
             <img src={Chevron} style={{width: "1em"}}/>
-            <span>Currently, I am:</span>
+            <span>What I'm Up To:</span>
             <ul className="arrow-list">
               <li>Automating Autodesk Revit workflows as a Software Developer at H.H. Angus</li>
               <li>Organizing Ontario Tech University's annual Hackathon</li>
+              <li>Maintaining a 4.0 cumulative GPA</li>
               <li>Reading 'Designing Machine Learning Systems' by Chip Huyen</li>
             </ul>
           </div>
           <div className="about-me-sub-text">
             <img src={Chevron} style={{width: "1em"}}/>
-            <span>In the past, I have:</span>
+            <span>Recent Highlights:</span>
             <ul className="arrow-list">
               <li>Won three hackathons, most recently at Canada's largest AI hackathon</li>
-              <li>Achieved a cumulative GPA of 4.0</li>
-              <li>Received two NSERC USRA undergraduate research awards</li>
+              <li>Awarded two NSERC USRA undergraduate research awards</li>
             </ul>
           </div>
           <i style={{position: "absolute", marginTop: "0.5em", marginLeft: "14%", fontSize: "4em"}}>Jun Bin Cheng.</i>

@@ -148,7 +148,8 @@ function App() {
                   pointerEvents: 'none',
                   fontFamily: 'Poppins, Inter, Arial, sans-serif',
                   transition: 'opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s',
-                  textShadow: '0 0 2px #fac16b, 0 0 2px #fac16b, 0 0 2px #fac16b'
+                  textShadow: '0 0 2px #fac16b, 0 0 2px #fac16b, 0 0 2px #fac16b',
+                  userSelect: 'none'
                 }}
               >
                 JUN BIN CHENG
