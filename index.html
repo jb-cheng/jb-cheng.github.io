@@ -1,25 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <title>Jun Bin Cheng</title>
+    <meta charset="UTF-8" />
+    <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Jun Bin Cheng</title>
   </head>
   <body>
     <div id="root"></div>
     <script>
-
       // Switch favicon for dark/light mode
       function setFaviconForColorScheme() {
         const faviconLight = '/favicon-light.svg';
         const faviconDark = '/favicon-dark.svg';
+        
         let isDark = false;
         if (window.matchMedia) {
           isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         }
+
         const favicon = document.getElementById('dynamic-favicon');
-        if (favicon) favicon.href = isDark ? faviconDark : faviconLight;
+        if (favicon) {
+          favicon.href = isDark ? faviconDark : faviconLight;
+        }
       }
 
       // Run on initial load and set up listener for changes
