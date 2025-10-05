@@ -2,13 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://jb-cheng.github.io/favicon.svg" />
+    <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="https://jb-cheng.github.io/favicon-light.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Jun Bin Cheng</title>
     <script type="module" crossorigin src="https://jb-cheng.github.io/assets/index-DY56qr5S.js"></script>
     <link rel="stylesheet" crossorigin href="https://jb-cheng.github.io/assets/index-BWXdUofD.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      // Switch favicon for dark/light mode
+      function setFaviconForColorScheme() {
+        const faviconLight = '/favicon-light.svg';
+        const faviconDark = '/favicon-dark.svg';
+        
+        let isDark = false;
+        if (window.matchMedia) {
+          isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        }
+
+        const favicon = document.getElementById('dynamic-favicon');
+        if (favicon) {
+          favicon.href = isDark ? faviconDark : faviconLight;
+        }
+      }
+
+      // Run on initial load and set up listener for changes
+      setFaviconForColorScheme();
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFaviconForColorScheme);
+      }
+    </script>
   </body>
 </html>
