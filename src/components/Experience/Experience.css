@@ -1,3 +1,18 @@
+#experience {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    overflow: visible;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.experience-donut {
+    position: absolute;
+    left: 70%;
+    top: 10%;
+}
+
 .job-container {
     position: relative;
     padding-top: 0;
@@ -34,6 +49,5 @@ ul.job-detail-list li {
 @media (max-width: 1560px) {
     .job-container {
         margin-top: 7em;
-        left: 48%;
     }
 }

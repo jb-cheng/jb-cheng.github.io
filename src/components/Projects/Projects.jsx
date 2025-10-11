@@ -2,7 +2,6 @@ import './Projects.css';
 
 import SideBar from "../SideBar";
 import SectionHeader from '../SectionHeader';
-
 import ProjectCard from './ProjectCard';
 
 import ANN from '../../assets/projects/ANN.png';
@@ -14,27 +13,13 @@ import Donut from '../Donut';
 
 export default function Projects() {
     return (
-        <section className='white-bg' id="projects" style={{
-            display: "block", 
-            width: "100%", 
-            padding: "20px 0", 
-            overflow: "hidden",
-            height: "auto",
-            minHeight: "100vh"
-        }}>
-                <SideBar text="Projects" scrollAmount="1600"/>
+        <section id="projects" className='white-bg'>
+                <SideBar text="Projects"/>
                 <SectionHeader text="Projects"/>
 
-                <div style={{
-                position: 'absolute',
-                bottom: '8%',        /* Move up/down (0% = top, 100% = bottom) */
-                left: '-15%',       /* Move left/right (0% = left, 100% = right) */
-                // transform: 'translate(-50%, -50%)', /* Fine-tune centering */
-                // opacity: 0.1
-                zIndex: 0
-            }}>
-                <Donut size={1750} colors={['#F9F4EB', '#F9F4EB', '#F9F4EB', '#F9F4EB']} />
-            </div>
+                <div className="projects-donut">
+                    <Donut diameter={1750} colour='#F9F4EB' />
+                </div>
 
                 <div className='project-grid'>
                     <ProjectCard 
@@ -42,11 +27,11 @@ export default function Projects() {
                         img={LabelLens}
                         link="https://devpost.com/software/LabelLens" 
                         linkText="Learn more about LabelLens!"
-                        description="Award Winner at GenAI Genesis 2025."
+                        description="🏆Award Winner at GenAI Genesis 2025"
                         description2="An app that scans medicine labels and provides personalized reccommendations about the medicine's ingredients."
                         languages={["HTML", "CSS", "Javascript", "Docker"]}
                         frameworks={["React"]}
-                        tools={["Gemini", "Weviate", "Node.js", "RAG"]}
+                        tools={["Google Gemini", "Weviate", "Node.js", "RAG"]}
                     /> 
 
                     <ProjectCard 
@@ -54,7 +39,7 @@ export default function Projects() {
                         img="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/207/371/datas/gallery.jpg"
                         link="https://devpost.com/software/idkkkkkkk" 
                         linkText="Learn more about TuringSketch!"
-                        description="Award Winner at DeltaHacks XI."
+                        description="🏆Award Winner at DeltaHacks XI"
                         description2="A Turing Test inspired game where players guess which image is AI generated and which is human drawn."
                         languages={["Python"]}
                         frameworks={["Streamlit"]}

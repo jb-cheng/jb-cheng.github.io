@@ -1,4 +1,10 @@
 import './Experience.css';
+import 'react-vertical-timeline-component/style.min.css';
+
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import Donut from '../Donut';
+import SectionDivider from '../SectionDivider';
+import TiltImage from './TiltImage';
 
 import SideBar from "../SideBar";
 import SectionHeader from '../SectionHeader';
@@ -14,92 +20,17 @@ import Stonks from '../../assets/ibkrweb.png';
 import Catalogue from '../../assets/cymweb.png';
 import hhangusJob from '../../assets/hhangus-job.jpg';
 
-import Donut from '../Donut';
-
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-
-// TiltImage component for mouse tilt effect
-function TiltImage({ src, alt, className, style }) {
-  const THRESHOLD = 20;
-  const handleHover = (e) => {
-    const { clientX, clientY, currentTarget } = e;
-    const { clientWidth, clientHeight } = currentTarget;
-    const offsetLeft = currentTarget.getBoundingClientRect().left;
-    const offsetTop = currentTarget.getBoundingClientRect().top;
-    const horizontal = (clientX - offsetLeft) / clientWidth;
-    const vertical = (clientY - offsetTop) / clientHeight;
-    const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
-    const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
-    currentTarget.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
-  };
-  const resetStyles = (e) => {
-    e.currentTarget.style.transform = `perspective(${e.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
-  };
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      style={style}
-      onMouseMove={handleHover}
-      onMouseLeave={resetStyles}
-      draggable={false}
-    />
-  );
-}
-
 export default function Experience() {
   return (
-    <section className='white-bg' id="experience" style={{   
-      display: "block", 
-      width: "100%", 
-      padding: "20px 0", 
-      overflow: "visible",
-      height: "100%",
-      minHeight: "100vh",
-    }}>
-      <SideBar text="Experience" scrollAmount="1100"/>
+    <section className='white-bg' id="experience">
+      <SideBar text="Experience" />
       <SectionHeader text="Experience"/>
-      <div style={{
-        position: 'absolute',
-        top: '70%',    /* Move up/down (0% = top, 100% = bottom) */
-        left: '70%',     /* Move left/right (0% = left, 100% = right) */
-        // transform: 'translate(-50%, -50%)', /* Fine-tune centering */
-        // opacity: 0.1
-        zIndex: 0
-      }}>
-        <Donut size={1500} colors={['#F1E6D0', '#F1E6D0', '#F1E6D0', '#F1E6D0']} />
+
+      <div className="experience-donut">
+        <Donut diameter={1500} colour='#F1E6D0' />
       </div>
 
-      {/* <div style={{
-        width: 43.29, 
-        height: 9.94, 
-        left: '3%', 
-        top: '20%', 
-        position: 'absolute', 
-        transform: 'rotate(67deg)', 
-        transformOrigin: 'top left', 
-        borderRadius: 9999, 
-        border: '3px #B3643B solid',
-        zIndex: 2
-      }} /> */}
-
       <div className="job-container">
-        {/* <img src={AlignFreeze} 
-        alt="Drone" 
-        className="experience-image"
-        style={{ 
-          width: "25%",
-          position: "absolute", 
-          top: "5%", 
-          left: "67%", 
-          transform: "translateX(-50%)", 
-          zIndex: 1, 
-          borderRadius: "10px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)"
-        }}
-        /> */}
         <VerticalTimeline lineColor='#EB9974' layout='1-column-right'>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -302,46 +233,7 @@ export default function Experience() {
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
-      {/* <div className="timeline-background-shape"></div> */}
-
-      <div style={{
-        width: "100vw",
-        height: "1.5em",
-        backgroundColor: "#B2653B",
-        position: "relative",
-        left: 0,
-        bottom: "2em",
-        overflow: "hidden",
-        userSelect: "none",
-        marginTop: "5em"
-      }}>
-        {Array.from({ length: 20 }).map((_, i) => (
-          <span key={i} style={{marginRight: "7em", fontWeight: "bold", color: "white", marginBottom: "3px"}}>▼ SECTOR 03 - PROJECTS ▼</span>
-        ))}
-      </div>
-
-      {/* <div style={{
-        width: "100vw",
-        height: "1.5em",
-        backgroundColor: "#B2653B",
-        marginTop: "3em",
-        zIndex: 2
-      }}>
-        {Array.from({ length: 20 }).map((_, i) => (
-          <span key={i} style={{marginRight: "1em", fontWeight: "bold", color: "white", marginBottom: "3px"}}>EXPERIENCE</span>
-        ))}
-      </div>
-      <div style={{
-        width: "100vw",
-        height: "1.5em",
-        backgroundColor: "#B2653B",
-        marginTop: "0.5em",
-        zIndex: 2
-      }}>
-        {Array.from({ length: 20 }).map((_, i) => (
-          <span key={i} style={{marginRight: "1em", fontWeight: "bold", color: "white", marginBottom: "3px"}}>EXPERIENCE</span>
-        ))}
-      </div> */}
+      <SectionDivider text="▼ SECTOR 03 - PROJECTS ▼" bottomPos={"2em"}></SectionDivider>
     </section>
   );
 }

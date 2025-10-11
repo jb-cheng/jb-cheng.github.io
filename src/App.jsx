@@ -1,31 +1,32 @@
-
 import './styles.css';
-import { useRef } from 'react';
+import './transitions.css';
 
-import Landing from './components/Landing/Landing';
-import About from './components/About/About';
-import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import ScrollToTop from './components/ScrollToTop';
-import DotNav from './components/DotNav';
-
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import PuffLoader from 'react-spinners/PuffLoader';
 import { motion } from "framer-motion";
 
-function App() {
+import Landing from './components/Landing/Landing';
+import ParticleBackground from './components/Landing/ParticleBackground';
+import About from './components/About/About';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
+import DotNav from './components/DotNav';
+
+export default function App() {
   const [loading, setLoading] = useState(true);
-  const [showDotNav, setShowDotNav] = useState(false);
+  
   const [showTransition, setShowTransition] = useState(false);
-  const [transitionDone, setTransitionDone] = useState(false);
-  const [fadeOutName, setFadeOutName] = useState(false);
-  const transitionRef = useRef(null);
+  const [transitionOpacity, setTransitionOpacity] = useState('1');
   const [barWidth, setBarWidth] = useState('0');
+
+  const [showDotNav, setShowDotNav] = useState(false);
 
   // Wait for all images and window resources to load
   useEffect(() => {
     const handleWindowLoad = () => setLoading(false);
+
+    // If already loaded, set loading to false
+    // Otherwise set listener
     if (document.readyState === 'complete') {
       setLoading(false);
     } else {
@@ -34,63 +35,46 @@ function App() {
     }
   }, []);
 
-  // Show 3 colour bar transition after loading
+  // 3 colour bar transition after loading
   useEffect(() => {
-    let transitionEndHandler;
-    let fallbackTimeout;
-    if (!loading) {
-      setShowTransition(true);
-      setTimeout(() => {
-        setBarWidth('100vw');
-      }, 50); // allow render
-      // Fade out name before bar fades out
-      setTimeout(() => {
-        setFadeOutName(true);
-      }, 700);
-      setTimeout(() => {
-        if (transitionRef.current) {
-          transitionRef.current.classList.add('bar-fade-out');
-        }
-      }, 1050);
-      // Remove bar only after opacity transition ends
-      transitionEndHandler = (e) => {
-        if (e.propertyName === 'opacity') {
-          setShowTransition(false);
-          setTransitionDone(true);
-        }
-      };
-      if (transitionRef.current) {
-        transitionRef.current.addEventListener('transitionend', transitionEndHandler, { once: true });
-      }
-      // Fallback: ensure bar is removed after 2.5s
-      fallbackTimeout = setTimeout(() => {
-        setShowTransition(false);
-        setTransitionDone(true);
-      }, 2500);
-    }
-    return () => {
-      if (transitionRef.current && transitionEndHandler) {
-        transitionRef.current.removeEventListener('transitionend', transitionEndHandler);
-      }
-      if (fallbackTimeout) {
-        clearTimeout(fallbackTimeout);
-      }
-    };
+    // Skip transition for initial mounting of loading state
+    if (loading) return;
+
+    setShowTransition(true);
+
+    // Start bar animation after 50ms
+    setTimeout(() => {
+      setBarWidth('100vw');
+    }, 50);
+
+    // Start name fade out after 700ms
+    setTimeout(() => {
+      setTransitionOpacity('0');
+    }, 700);
+
+    // Remove all transition elements after 2.5s
+    setTimeout(() => {
+      setShowTransition(false);
+    }, 2500);
   }, [loading]);
 
-  // Show dot nav when about section is in view
+  // Show dot nav if distance between the top of the About section and the top of
+  // the window is less than half of the viewport height
+  // The origin (0,0) is the top left of the window
   const handleScroll = () => {
     const aboutSection = document.getElementById('about');
+
     if (aboutSection) {
       const rect = aboutSection.getBoundingClientRect();
-      if (rect.top <= window.innerHeight / 2) {
+
+      if (rect.top <= window.innerHeight / 2)
         setShowDotNav(true);
-      } else {
+      else
         setShowDotNav(false);
-      }
     }
   };
 
+  // Add scroll event listener for displaying dot nav using handleScroll
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -98,78 +82,45 @@ function App() {
     };
   }, []);
 
-
-  if (loading || showTransition) {
+  // Loading Screen
+  if (loading) {
     return (
-      <>
-        {loading && (
-          <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", background: "#181818", zIndex: 1000}}>
-            <PuffLoader color="#faf6e5" size={200} />
-          </div>
-        )}
-        {showTransition && (
-          <div className="scanlines loading-overlay">
-            <div style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div className='loading-circle'></div>
-              <div
-                ref={transitionRef}
-                className="red-bar-transition"
-                style={{
-                  width: barWidth,
-                  height: '18vh',
-                  position: 'fixed',
-                  left: 0,
-                  top: '75%',
-                  zIndex: 2000,
-                  opacity: 1,
-                  pointerEvents: 'none',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'width 1s cubic-bezier(0.77,0,0.175,1), opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s',
-                }}
-              >
-                <div style={{ flex: 1, background: '#5C7F70', width: '100%' }}></div>
-                <div style={{ flex: 1, background: '#BB8530', width: '100%' }}></div>
-                <div style={{ flex: 1, background: '#802521', width: '100%' }}></div>
-              </div>
-              <div
-                className={fadeOutName ? 'fade-out-name' : ''}
-                style={{
-                  position: 'absolute',
-                  top: 'calc(10% + 10vh)',
-                  left: 0,
-                  width: '100vw',
-                  textAlign: 'center',
-                  fontSize: '10em',
-                  fontWeight: 'bold',
-                  color: '#f9ead3',
-                  letterSpacing: '0.05em',
-                  zIndex: 3000,
-                  pointerEvents: 'none',
-                  fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                  transition: 'opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s',
-                  textShadow: '0 0 2px #fac16b, 0 0 2px #fac16b, 0 0 2px #fac16b',
-                  userSelect: 'none'
-                }}
-              >
-                JUN BIN CHENG
-                <br/>
-                鄭俊斌
-              </div>
-            </div>
-          </div>
-        )}
-      </>
+      <div className="loading-screen">
+        <PuffLoader color="#faf6e5" size={200} />
+      </div>
     );
   }
 
+  // Transition screen
+  // i don't know why motion.div doesn't work here so i used transitionOpacity
+  if (showTransition) {
+    return (
+      <div className="scanlines" style={{ opacity: transitionOpacity }}>
+        <div className="transition-container" style={{ opacity: transitionOpacity }}>
+          <div className="transition-circle" />
+          <div className="transition-bar" style={{ width: barWidth, opacity: transitionOpacity }}>
+            <div style={{ flex: 1, background: '#5C7F70', width: '100%' }} />
+            <div style={{ flex: 1, background: '#BB8530', width: '100%' }} />
+            <div style={{ flex: 1, background: '#802521', width: '100%' }} />
+          </div>
+          <div className="transition-name" style={{ opacity: transitionOpacity }}>
+            JUN BIN CHENG
+            <br />
+            鄭俊斌
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // The main app
   return (
-    <motion.div
+    <motion.div // Fade in entire app after transition
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 3 }}
-      className="text-center"
+      transition={{ duration: 1 }}
     >
+      <div className='particles-container'><ParticleBackground /></div>
       {showDotNav && <DotNav />}
       <Landing />
       <About />
@@ -178,5 +129,3 @@ function App() {
     </motion.div>
   );
 }
-
-export default App;

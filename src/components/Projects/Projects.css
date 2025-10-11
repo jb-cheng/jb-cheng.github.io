@@ -1,3 +1,12 @@
+#projects {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    height: auto;
+    min-height: 100vh;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -24,24 +33,12 @@ article {
   overflow: hidden;
   cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
-
-article a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
-  content: "";
-  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
-}
-
-/* basic article elements styling */
-article h2 {
-  margin: 0 0 18px 0;
-  font-family: "Poppins", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.06em;
-  color: var(--title-color);
-  transition: color 0.3s ease-out;
-  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 figure {
@@ -56,23 +53,44 @@ article img {
   transform-origin: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
-  
 }
 
 .article-body {
   padding: 24px;
 }
 
+.project-name {
+  margin: 0 0 -5px 0;
+  font-family: "Poppins", cursive;
+  font-size: 1.9rem;
+  /* letter-spacing: 0.06em; */
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+}
+
+.description {
+  margin: 12px 0;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+}
+
 article a {
+  margin-top: 15px;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   color: #28666e;
   cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
-
 article a:focus {
   outline: 1px dotted #28666e;
+  cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
+}
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  content: "";
   cursor: url(../../assets/arrowhead-rounded-outline.png), auto;
 }
 
@@ -86,22 +104,13 @@ article a .icon {
   transition: all 0.3s;
 }
 
-/* using the has() relational pseudo selector to update our custom properties */
-article:has(:hover, :focus) {
-  --img-scale: 1.1;
-  --title-color: #28666e;
-  --link-icon-translate: 0;
-  --link-icon-opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.tool-container {
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.tool {
+.skill {
     display: inline-block;
     border-radius: 10px;
     margin: 2px; 
@@ -110,6 +119,11 @@ article:has(:hover, :focus) {
     width: fit-content;
     white-space: nowrap;
     font-weight: 600;
+}
+
+.projects-donut {
+    position: absolute;
+    left: -15%;
 }
 
 @media (max-width: 1560px) {

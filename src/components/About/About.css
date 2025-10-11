@@ -1,23 +1,27 @@
-.about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 100px;
-    margin-top: 1%;
-    width: 80%;
-    height: 80%;
-    margin-left: 14%;
+#about {
+    display: block;
+    width: 100%;
+    padding: 5% 0;
+    overflow: visible;
+    height: 90vh;
+    padding-bottom: 0%;
 }
 
-.about-me-text-container {
-    flex: 60;
+i {
+    font-family: "Ms Madi", cursive;
+    font-size: 1.9em;
+    line-height: 0.75;
+    color: black;
 }
 
-#hello {
-    padding-right: 0.5em;
+.vertical-line {
+    background-color: #B2653B;
+    height: 6em;
+    width: 0.2em;
+    position: absolute;
+    left: -0.5em;
 }
 
-/* Summary */
 .about-me-text {
     font-size: 1.25em;
     color: black;
@@ -25,14 +29,15 @@
     margin-left: 1em;
     flex: 69;
 }
+#hello {    /*Hello World font is different so needs special spacing*/
+    padding-right: 0.5em;
+}
 
-/* Bullet points (Currently/Accomplishments) */
 .about-me-sub-text {
     font-size: 1.25em;
     color: black;
     position: relative;
     margin-left: 3em;
-    /* padding-left: 6em; */
     text-indent:-2em;
     max-width: 91%;
     padding: 1em 0 0.5em;
@@ -41,28 +46,26 @@
     transform: scale(1.01);
 }
 
-/* The circle on the left side */
-.circle {
-    height: 20em;
-    width: 20em;
-    background-color: #B2653B;
-    border-radius: 50%;
-    position: absolute;
-    display: block;
-    margin-top: 14em;
-    margin-left: -3.5em;
+.arrow-list {
+    list-style: none;
+    padding-left: 1.5em;
+    margin: 0 0;
 }
 
-/* Signature */
-i {
-    font-family: "Ms Madi", cursive;
-    font-size: 1.9em;
-    line-height: 0.75;
-    color: black;
+.list-chevron {
+    width: 1em;
 }
 
-.about-me-logo-grid {
-    flex: 31;
+.arrow-list li {
+    color: #222;
+    white-space: normal;
+    padding-left: 0;
+}
+.arrow-list li::before {
+    content: "↳";
+    margin-right: 0.5em;
+    color: #222;
+    font-weight: bold;
 }
 
 .logo-grid {
@@ -70,7 +73,6 @@ i {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px 0px;
     padding: 20px;
-    /*justify-content: center;  Centers the grid */
     align-items: center;
 }
 
@@ -88,36 +90,32 @@ i {
     transform: scale(1.1);
 }
 
-/* Email, Linkedin, GitHub Icons */
+i.signature {
+    user-select: none;
+    position: absolute;
+    margin-top: 0.5em;
+    margin-left: 14%;
+    font-size: 4em;
+}
+
 .link-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* top: 35%; */
     height: 10%;
     gap: 50px;
     margin-top: 8em;
 }
 .link-bar img {
     user-select: none;
+    width: 3em; 
+    height: 3em;
 }
 .link-bar img:hover {
     transform: scale(1.1);
 }
 
-.logo-container img {
-    user-select: none;
-}
-.logo-container img:hover {
-    transform: scale(1.1);
-}
-
-p img {
-    padding-right: 0.3em;
-}
-
-/* Resume Button */
-.link-btn {
+.resume-btn {
     background-color: #333333;
     color: #faf6e6;
     font-size: 1.25em;
@@ -128,56 +126,30 @@ p img {
     border-right: 9px solid transparent;
     user-select: none;
 }
-
-.link-link {
-    text-decoration: underline;
-}
-
-.link-btn:hover {
+.resume-btn:hover {
     border-left: 9px solid #B2653B;
 }
 
-.line {
-    background-color: #B2653B;
-    width: 6em;
-    height: 0.2em;
-    position: absolute;
-    left: 5%;
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-top: 1%;
+    width: 80%;
+    height: 80%;
+    margin-left: 14%;
 }
 
-.vert-line {
-    background-color: #B2653B;
-    height: 6em;
-    width: 0.2em;
-    position: absolute;
-    left: -0.5em;
+.about-me-text-container {
+    flex: 60;
 }
 
-@media (max-width: 1553px) {
-    .vert-line {
-        height: 6em;
-    }
-}
-
-@media (max-width: 1786px) {
-    .circle {
-        margin-left: -5em;
-    }
-}
-
-#about {
-    display: block;
-    width: 100%;
-    padding: 5% 0;
-    overflow: visible;
-    height: 90vh;
-    padding-bottom: 0%;
+.logo-grid-container {
+    flex: 31;
 }
 
 @media (max-width: 1560px) {
-    .circle {
-        display: none;
-    }
     .about-container {
         margin-left: 5%;
         gap: 100px;
@@ -195,7 +167,7 @@ p img {
         padding-top: 0.75em;
         padding-bottom: 0.75em;
     }
-    .about-me-logo-grid {
+    .logo-grid-container {
         flex: 40;
     }
 }   
@@ -240,22 +212,8 @@ p img {
     }
 }
 
-.arrow-list {
-    list-style: none;
-    padding-left: 1.5em;
-    margin: 0 0;
-}
-
-.arrow-list li {
-    color: #222;
-    white-space: normal;
-    /* text-indent: 0; */
-    padding-left: 0;
-}
-
-.arrow-list li::before {
-    content: "↳";
-    margin-right: 0.5em;
-    color: #222;
-    font-weight: bold;
+@media (max-width: 1553px) {
+    .vertical-line {
+        height: 6em;
+    }
 }

@@ -1,71 +1,59 @@
 import './Landing.css';
 
-import WideThreeColourBar from './WideThreeColourBar';
+import UnderlineBar from './UnderlineBar';
 import Rings from '../../assets/Rings.svg';
-import DownArrow from './DownArrow';
 import NavItem from './NavItem';
-import ParticleBackground from './ParticleBackground';
 import Donut from '../Donut';
+import DownArrow from './DownArrow';
+
 import RhinePause from '../../assets/RhinePause.png';
-import AdAstra from '../../assets/AdAstraQuiet.mp3';
+import AdAstra from '../../assets/AdAstra.mp3';
 
 export default function Landing() {
+  // Play/pause background music
   const handlePlayMusic = () => {
     const audio = document.getElementById('landing-audio');
-    if (audio) {
-      if (audio.paused) {
+    if (audio)
+      if (audio.paused)
         audio.play().catch(error => {
           console.log('Audio play failed:', error);
         });
-      } else {
+      else
         audio.pause();
-      }
-    }
   };
 
   return (
-    <section id="landing" style={{ backgroundColor: "#181818", overflow: "hidden", height: "100vh", position: "relative" }}>
+    <section id="landing">
       <audio
         id="landing-audio"
         src={AdAstra}
         preload="auto"
-        volume={0.005}
         loop
-        style={{ display: 'none' }}
       />
 
-      <div style={{ opacity: 0.15 }}>
-        <Donut size={2000} colors={['#2A2A2A', '#2A2A2A', '#2A2A2A', '#2A2A2A']} />
+      <div className="landing-donut">
+        <Donut diameter={2000} colour='#2A2A2A' />
       </div>
       
-      <img
+      <img  // Play button for background music
         src={RhinePause}
         alt="Play Music: Ad Astra by Steven Grove"
         onClick={handlePlayMusic}
         title="Ad Astra"
-        style={{
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '6em',
-          height: 'auto',
-          zIndex: 2,
-          userSelect: 'none',
-          pointerEvents: 'auto',
-          opacity: 0.2,
-          cursor: 'pointer'
-        }}
+        className="audio-play-pause"
       />
-
-      <div className='particles-container'><ParticleBackground /></div>
-      <div className='container'>
-        <div className="box">
-          <img src={Rings} alt="Concentric Rings" style={{ opacity: 0.3, position: "relative", top: "5.5%", left: "4.5%", userSelect: "none"}}/>
-          <div className="SWE-text-wrapper">4th Year Software Engineering Student</div>
-          <h1 className='title'>JUN BIN CHENG</h1>
-          <WideThreeColourBar />
+      
+      <div className="landing-container">
+        {/* Title and Subtitle */}
+        <div>
+          <img src={Rings} alt="Concentric Rings" className="rings" />
+          <div className="subtitle">4th Year Software Engineering Student</div>
+          <h1 className="name">JUN BIN CHENG</h1>
+          <UnderlineBar />
         </div>
-        <div className="box">
+
+        {/* Navigation Menu */}
+        <div>
           <NavItem targetId="about">About Me</NavItem>
           <NavItem targetId="experience">Experience</NavItem>
           <NavItem targetId="projects">Projects</NavItem>
