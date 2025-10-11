@@ -21,11 +21,35 @@
     width: 35%;
 }
 
-.job {
+
+.vertical-timeline-element-title {
+    display: inline;
+    margin-right: 10px;
+    float: left;
+}
+
+.vertical-timeline-element-subtitle {
+    display: block;
+    clear: both;
+}
+
+.vertical-timeline-element-image {
+    width: 101%;
+    object-fit: cover;
+    object-position: 0 0;
+    position: absolute;
+    top: 0;
+    left: 115%;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* .job {
     height: 20%;
     word-wrap: break-word;
     border: black 1px solid;
-}
+} */
 
 h2, h3, h4, p {
     color: black;
@@ -33,6 +57,12 @@ h2, h3, h4, p {
 
 .date {
     color: black;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    user-select: none;
 }
 
 .job-detail-list {

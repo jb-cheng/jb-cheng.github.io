@@ -1,8 +1,8 @@
 import './About.css'
 
-import Linkedin from '../../assets/logos/Linkedin.svg';
-import Github from '../../assets/logos/Github.svg';
-import Email from '../../assets/logos/Email.svg';
+import Linkedin from '../../assets/Linkedin.svg';
+import Github from '../../assets/Github.svg';
+import Email from '../../assets/Email.svg';
 
 export default function LinkBar() {
   return (
