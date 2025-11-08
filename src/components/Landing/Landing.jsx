@@ -9,23 +9,39 @@ import DownArrow from './DownArrow';
 import RhinePause from '../../assets/RhinePause.png';
 import AdAstra from '../../assets/AdAstra.mp3';
 
+import { useState, useRef, useEffect } from 'react';
+
 export default function Landing() {
+  const [volume, setVolume] = useState(0.95);
+  const audioRef = useRef(null);
+
   // Play/pause background music
   const handlePlayMusic = () => {
-    const audio = document.getElementById('landing-audio');
-    if (audio)
-      if (audio.paused)
-        audio.play().catch(error => {
-          console.log('Audio play failed:', error);
-        });
-      else
-        audio.pause();
+    const audio = audioRef.current;
+
+    if (!audio) 
+      return;
+    
+    if (audio.paused) 
+      audio.play().catch(error => {
+       console.log('Audio play failed:', error); 
+      });
+    else 
+      audio.pause();
   };
+
+  // Update audio volume when slider changes
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio)
+      audio.volume = Number(volume);
+  }, [volume]);
 
   return (
     <section id="landing">
       <audio
         id="landing-audio"
+        ref={audioRef}
         src={AdAstra}
         preload="auto"
         loop
@@ -37,12 +53,23 @@ export default function Landing() {
       
       <img  // Play button for background music
         src={RhinePause}
-        alt="Play Music: Ad Astra by Steven Grove"
+        alt="Play/Pause: Ad Astra by Steven Grove"
         onClick={handlePlayMusic}
-        title="Ad Astra"
+        title="Play/Pause: Ad Astra by Steven Grove"
         className="audio-play-pause"
       />
-      
+
+      <input
+        className="audio-volume-slider"
+        type="range"
+        min={0}
+        max={1}
+        step={0.02}
+        value={volume}
+        title={`Volume: ${Math.round(volume * 100)}%`}
+        onChange={event => setVolume(event.target.valueAsNumber)}
+      />
+
       <div className="landing-container">
         {/* Title and Subtitle */}
         <div>

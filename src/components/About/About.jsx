@@ -27,7 +27,7 @@ export default function About() {
             <img src={Chevron} className="list-chevron"/>
             <span>What I'm Up To:</span>
             <ul className="arrow-list">
-              <li>Automating Autodesk Revit workflows as a Software Developer at H.H. Angus</li>
+              <li>Building Cursor for Revit at H.H. Angus</li>
               <li>Organizing Ontario Tech University's annual Hackathon</li>
               <li>Maintaining a 4.0 cumulative GPA</li>
               <li>Reading 'Designing Machine Learning Systems' by Chip Huyen</li>
@@ -38,6 +38,7 @@ export default function About() {
             <img src={Chevron} className="list-chevron"/>
             <span>In the past, I have:</span>
             <ul className="arrow-list">
+              <li>Co-authored a main conference paper at IJCNLP-AACL 2025</li>
               <li>Won three hackathons, most recently at Canada's largest AI hackathon</li>
               <li>Received two NSERC USRA undergraduate research awards</li>
               <li>Been awarded consecutive scholarships for academic excellence</li>

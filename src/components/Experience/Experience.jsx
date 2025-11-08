@@ -39,12 +39,13 @@ export default function Experience() {
             dateRange="Sep 2025 - Present"
             companyName="H.H. Angus and Associates Ltd."
             jobDetails={[
-              "Developing and maintaining in-house Revit plugins using C#, Dynamo and the Revit API to automate design workflows, improving efficiency for 50+ engineers.",
+              "Leading the company-wide adoption of the Revit Model Context Protocol (MCP) with Claude AI by reverse-engineering the open-source framework and developing custom command sets, streamlining workflows by 130%.",
+              "Develop Revit plugins using C# to automate design processes for 150+ electrical and mechanical engineers.",
               "Identified and rectified critical flaws in a production-level script for BIM validation, which was generating erroneous reports 90% of the time due to unhandled edge cases."
             ]}
             imageSrc={HHAngusJob}
             imageAlt="Revit Screenshot"
-            imageHeight="16em"
+            imageHeight="19em"
           />
 
           <CustomTimelineElement

@@ -6,8 +6,9 @@
 
 .audio-play-pause {
     position: absolute;
-    top: 0;
-    right: 0;
+    /* margin-top: 0.5em; */
+    top: 1em;
+    right: 1em;
     width: 7em;
     height: auto;
     z-index: 2;
@@ -15,6 +16,72 @@
     pointer-events: auto;
     opacity: 0.2;
     cursor: pointer;
+}
+.audio-play-pause:hover {
+    opacity: 0.4;
+}
+
+.audio-volume-slider {
+  position: absolute;
+  top: 5.5em;
+  right: 1.25em;
+  width: 8em;
+  z-index: 2;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent; /* don't fill entire control */
+  opacity: 0.2;
+  accent-color: #ffffff;
+}
+.audio-volume-slider:hover {
+    opacity: 0.4;
+}
+
+
+/* thin white track (WebKit) */
+.audio-volume-slider::-webkit-slider-runnable-track {
+  height: 2px;                        /* thin line */
+  background: rgba(255,255,255,0.9);
+  border-radius: 999px;
+}
+
+/* white circular thumb (WebKit) */
+.audio-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+  margin-top: -6px; /* center thumb on 2px track: -(thumbHeight - trackHeight)/2 */
+}
+
+/* thin white track (Firefox) */
+.audio-volume-slider::-moz-range-track {
+  height: 2px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 999px;
+}
+
+/* white circular thumb (Firefox) */
+.audio-volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+/* remove default focus outline if desired */
+.audio-volume-slider:focus {
+  outline: none;
 }
 
 .name {
