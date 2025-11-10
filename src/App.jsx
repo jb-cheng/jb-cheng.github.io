@@ -21,6 +21,24 @@ export default function App() {
 
   const [showDotNav, setShowDotNav] = useState(false);
 
+  //////////////// Track viewport size (for development only) ////////////////
+  const [viewport, setViewport] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+    height: typeof window !== 'undefined' ? window.innerHeight : 0,
+  });
+  useEffect(() => {
+    const handleResize = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      setViewport({ width: w, height: h });
+      console.log('viewport:', w, h);
+    };
+    console.log('viewport:', viewport.width, viewport.height);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  ///////////////////////////////////////////////////////////////////////////
+
   // Wait for all images and window resources to load
   useEffect(() => {
     const handleWindowLoad = () => setLoading(false);
@@ -96,19 +114,23 @@ export default function App() {
   if (showTransition) {
     return (
       <div className="scanlines" style={{ opacity: transitionOpacity }}>
-        <div className="transition-container" style={{ opacity: transitionOpacity }}>
-          <div className="transition-circle" />
-          <div className="transition-bar" style={{ width: barWidth, opacity: transitionOpacity }}>
-            <div style={{ flex: 1, background: '#5C7F70', width: '100%' }} />
-            <div style={{ flex: 1, background: '#BB8530', width: '100%' }} />
-            <div style={{ flex: 1, background: '#802521', width: '100%' }} />
-          </div>
-          <div className="transition-name" style={{ opacity: transitionOpacity }}>
-            JUN BIN CHENG
-            <br />
-            鄭俊斌
-          </div>
+      <div className="transition-container" style={{ opacity: transitionOpacity }}>
+        <div className="transition-circle" />
+        <div className="transition-bar" style={{ width: barWidth, opacity: transitionOpacity }}>
+        <div style={{ flex: 1, background: '#5C7F70', width: '100%' }} />
+        <div style={{ flex: 1, background: '#BB8530', width: '100%' }} />
+        <div style={{ flex: 1, background: '#802521', width: '100%' }} />
         </div>
+        <div className="transition-name" style={{ opacity: transitionOpacity }}>
+          JUN BIN CHENG
+          {viewport.height > 680 && (
+          <>
+          <br />
+          鄭俊斌
+          </>
+        )}
+        </div>
+      </div>
       </div>
     );
   }

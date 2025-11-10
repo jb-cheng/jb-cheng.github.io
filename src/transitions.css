@@ -111,8 +111,18 @@
     transition: opacity 1.2s cubic-bezier(0.77,0,0.175,1) 1s;
 }
 
-@media (max-width: 1560px) {
+/**************************
+* Responsive Styles
+**************************/
+@media (max-height: 805px) {
     .transition-name {
-        top: calc(10% + 15vh);
+        top: 10%;
     }
+    
+}
+
+@media (max-height: 680px) {
+    .transition-name {
+        top: 30%;
+    }   
 }

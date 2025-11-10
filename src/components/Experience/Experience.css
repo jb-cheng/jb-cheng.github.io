@@ -19,8 +19,8 @@
     left: 20%;
     /* transform: translate(-50%, 0); */
     width: 35%;
+    min-width: 400px; /* Ensure minimum width for content */
 }
-
 
 .vertical-timeline-element-title {
     display: inline;
@@ -43,6 +43,7 @@
     z-index: 1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: height 0.2s ease-out; /* Smooth height transitions */
 }
 
 /* .job {
@@ -76,8 +77,31 @@ ul.job-detail-list li {
     margin-bottom: 0.5em;
 }
 
+
+@media (max-width: 1200px) {
+    .job-container {
+        left: 10%;
+        width: 45%;
+        min-width: 350px;
+    }
+    
+    .vertical-timeline-element-image {
+        left: 110%; /* Adjust image position for smaller screens */
+    }
+}
+
 @media (max-width: 1560px) {
     .job-container {
-        margin-top: 7em;
+        margin-top: 1em;
+        width: 100%;
+        left: 0;
+        min-width: unset;
+    }
+    
+    .vertical-timeline-element-image {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-top: 2em;
     }
 }

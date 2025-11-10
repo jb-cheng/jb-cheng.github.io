@@ -45,7 +45,7 @@ export default function Experience() {
             ]}
             imageSrc={HHAngusJob}
             imageAlt="Revit Screenshot"
-            imageHeight="19em"
+            imageMinHeight="19em"
           />
 
           <CustomTimelineElement
@@ -61,7 +61,7 @@ export default function Experience() {
             ]}
             imageSrc={LeeLabJob}
             imageAlt="Diagram of Experimental Pipeline"
-            imageHeight="19em"
+            imageMinHeight="19em"
           />
 
           <CustomTimelineElement
@@ -76,7 +76,7 @@ export default function Experience() {
             ]}
             imageSrc={BlueprintJob}
             imageAlt="Diagram of Experimental Pipeline"
-            imageHeight="17em"
+            imageMinHeight="17em"
           />
 
           <CustomTimelineElement
@@ -91,7 +91,7 @@ export default function Experience() {
             ]}
             imageSrc={NSERCJob}
             imageAlt="Diagram of Experimental Pipeline"
-            imageHeight="17em"
+            imageMinHeight="17em"
           />
 
           <CustomTimelineElement
@@ -106,7 +106,7 @@ export default function Experience() {
             ]}
             imageSrc={CYMJob}
             imageAlt="picture of catalogue website"
-            imageHeight="16em"
+            imageMinHeight="16em"
           />
         </VerticalTimeline>
       </div>

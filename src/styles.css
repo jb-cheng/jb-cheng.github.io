@@ -114,6 +114,24 @@ section {
     overflow-y: visible;
 }
 
+.section-divider {
+    width: 100vw;
+    height: 1.5em;
+    background-color: #B2653B;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    user-select: none;
+    margin-top: 5em;
+}
+
+.section-divider-text {
+    margin-right: 7em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 3px;
+}
+
 /**************************
 * Sidebar (the vertical text on the left)
 **************************/
@@ -150,8 +168,8 @@ section {
     height: 63px;
     transform-origin: top left;
     background: #181818;
-    position: absolute;
-    top: 5%;
+    position: relative;
+    top: 3%;
     left: 14%;
     display: none;
 }
@@ -191,40 +209,9 @@ img {
     overflow: hidden;
 }
 
-.section-divider {
-    width: 100vw;
-    height: 1.5em;
-    background-color: #B2653B;
-    position: relative;
-    left: 0;
-    overflow: hidden;
-    user-select: none;
-    margin-top: 5em;
-}
-
-.section-divider-text {
-    margin-right: 7em;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 3px;
-}
-
-.vertical-timeline-element p {
-    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
-    font-weight: 400 !important;
-    font-style: normal !important;
-}
-
-/* Also target the title and subtitle if needed */
-.vertical-timeline-element-title {
-    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
-}
-
-.vertical-timeline-element-subtitle {
-    font-family: Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
-}
-
-/* Responsive sizing */
+/**************************
+* Responsive Styles
+**************************/
 @media (max-width: 768px) {
     .donut-container svg {
         width: 150px;
@@ -233,12 +220,17 @@ img {
 }
 
 @media (max-width: 1780px) {
-    .side-text {
+    .sidebar-text {
         margin-left: -14%;
     }
 }
+@media (max-width: 1650px) {
+    .sidebar-text {
+        margin-left: -17%;
+    }
+}
 @media (max-width: 1573px) {
-    .side-text {
+    .sidebar-text {
         margin-left: -23%;
     }
 }

@@ -7,8 +7,20 @@ import LinkBar from './LinkBar';
 import SectionDivider from '../SectionDivider';
 
 import Chevron from '../../assets/chevron.svg';
+import { useState, useEffect } from 'react';
 
 export default function About() {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section id="about" className='white-bg'>
       <SideBar text="About Me" />
@@ -45,12 +57,15 @@ export default function About() {
             </ul>
           </div>
           <i className="signature">Jun Bin Cheng</i>
-          <LinkBar/>
+          {windowWidth > 1350 && <LinkBar/>}
         </div>
+        <div className="logo-grid-container">
           <LogoGrid/>
+          {windowWidth <= 1350 && <LinkBar/>}
+        </div>
       </div>
 
-      <SectionDivider text="▼ SECTOR 02 - EXPERIENCE ▼"></SectionDivider>
+      <SectionDivider text="▼ SECTOR 02 - EXPERIENCE ▼" bottomPos={windowWidth > 1650 ? "" : "5%"}></SectionDivider>
     </section>
   );
 }

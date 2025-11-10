@@ -47,7 +47,7 @@ export default function LogoGrid() {
   }, []);
 
   return (
-    <div className="logo-grid-container">
+    
         <div className="logo-grid">
           {skills.map((logo, index) => (
             <img
@@ -58,6 +58,6 @@ export default function LogoGrid() {
             />
           ))}
         </div>
-      </div>
+      
   );
 };
